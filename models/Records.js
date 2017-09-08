@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 var RecordSchema = new mongoose.Schema({
+  invoice : {
         tax: String,
         invoice_number: String,
         logo_url: String,
@@ -24,7 +25,7 @@ var RecordSchema = new mongoose.Schema({
               description: String, 
               cost: String
             }
-          ]
+          ] }
 });
 
 

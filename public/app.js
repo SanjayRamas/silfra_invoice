@@ -433,6 +433,7 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
       console.log("addRecord2");
       
       records.create({
+        invoice : {
         tax: $scope.tax,
         invoice_number: $scope.invoice_number,
         logo_url: $scope.logo_url,
@@ -456,7 +457,7 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
               description: $scope.description, 
               cost: $scope.cost
             }
-          ]
+          ] }
           
         });
       $scope.tax="";
