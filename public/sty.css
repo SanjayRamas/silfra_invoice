@@ -1,0 +1,4274 @@
+    @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+    .glyphicon-thumbs-up { cursor:pointer } 
+    li{font-weight:bold;}
+    .search {position: relative;color: #aaa;font-size: 16px;}
+    .search input {width: 250px;height: 32px;}
+    .search .fa-search { position: absolute;top: 12px;left: 368px;color:#838383;}
+    html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline
+}
+html {
+    line-height: 1
+}
+ol,
+ul {
+    list-style: none
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+caption,
+th,
+td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle
+}
+q,
+blockquote {
+    quotes: none
+}
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+    content: "";
+    content: none
+}
+a img {
+    border: none
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block
+}
+.common-sprite,
+.common-approved,
+.common-callGreen,
+.common-checkbox,
+.common-checkboxChecked,
+.common-closePopup,
+.closeNotification::before,
+.common-downArrow,
+.common-editIcon,
+.common-facebook,
+.common-favIcon,
+.common-favIconActive,
+.common-favIconRemove,
+.common-favorite,
+.opFavLabel .opFavText::before,
+.opFavClick::before,
+.common-favorited,
+.opFavLabel .opFavInput:checked+.opFavText::before,
+.opFavClick.activeFavIcon::before,
+.common-googlePlus,
+.common-leftArrow,
+.homeFBListBlock .featuredLeftArrow::before,
+.common-likePlus,
+.common-location,
+.opAddress::before,
+.common-locationIcon,
+.common-mobAboutUs,
+.common-mobAboutUsActive,
+.common-mobCareers,
+.common-mobCareersActive,
+.common-mobCategory,
+.common-mobCategoryActive,
+.common-mobContactUs,
+.common-mobContactUsActive,
+.common-mobFaqs,
+.common-mobFaqsActive,
+.common-mobFav,
+.common-mobFavActive,
+.common-mobFeedback,
+.common-mobFeedbackActive,
+.common-mobHome,
+.common-mobHomeActive,
+.common-mobListView,
+.common-mobLocationIcon,
+.common-mobLogin,
+.common-mobLoginActive,
+.common-mobSearch,
+.common-mobSearchActive,
+.common-mobShareIcon,
+.common-mobYPLogo,
+.common-mobile-menu-black,
+.common-mobile-menu,
+.common-mobileBackArrow,
+.common-mobileBackArrowWhite,
+.common-openNewLink,
+.common-phone,
+.eachOPTitleBlock .opContact::before,
+.common-r0-5,
+.common-r1-0,
+.common-r1-5,
+.common-r2-0,
+.common-r2-5,
+.common-r3-0,
+.common-r3-5,
+.common-r4-0,
+.common-r4-5,
+.common-r5-0,
+.common-radio,
+.common-radioChecked,
+.common-rightArrow,
+.homeFBListBlock .featuredRightArrow::before,
+.common-search,
+.searchInputBlock .searchButton .searchIcon,
+.common-searchWhite,
+.common-thumbsDown,
+.common-thumbsUp,
+.opLike::before,
+.common-time,
+.opTimings::before,
+.common-twitter,
+.common-yellow-pages-logo,
+.common-youtube {
+    background-image: url('https://cdn.yellowpages.in/images/common-sc91308d0cf.png');
+    background-repeat: no-repeat
+}
+.common-approved {
+    background-position: 0 0
+}
+.common-callGreen {
+    background-position: 0 -22px
+}
+.common-checkbox {
+    background-position: 0 -48px
+}
+.common-checkboxChecked {
+    background-position: 0 -62px
+}
+.common-closePopup,
+.closeNotification::before {
+    background-position: 0 -76px
+}
+.common-downArrow {
+    background-position: 0 -92px
+}
+.common-editIcon {
+    background-position: 0 -100px
+}
+.common-facebook {
+    background-position: 0 -122px
+}
+.common-favIcon {
+    background-position: 0 -142px
+}
+.common-favIconActive {
+    background-position: 0 -162px
+}
+.common-favIconRemove {
+    background-position: 0 -182px
+}
+.common-favorite,
+.opFavLabel .opFavText::before,
+.opFavClick::before {
+    background-position: 0 -202px
+}
+.common-favorited,
+.opFavLabel .opFavInput:checked+.opFavText::before,
+.opFavClick.activeFavIcon::before {
+    background-position: 0 -216px
+}
+.common-googlePlus {
+    background-position: 0 -230px
+}
+.common-leftArrow,
+.homeFBListBlock .featuredLeftArrow::before {
+    background-position: 0 -250px
+}
+.common-likePlus {
+    background-position: 0 -262px
+}
+.common-location,
+.opAddress::before {
+    background-position: 0 -282px
+}
+.common-locationIcon {
+    background-position: 0 -296px
+}
+.common-mobAboutUs {
+    background-position: 0 -313px
+}
+.common-mobAboutUsActive {
+    background-position: 0 -333px
+}
+.common-mobCareers {
+    background-position: 0 -353px
+}
+.common-mobCareersActive {
+    background-position: 0 -373px
+}
+.common-mobCategory {
+    background-position: 0 -393px
+}
+.common-mobCategoryActive {
+    background-position: 0 -413px
+}
+.common-mobContactUs {
+    background-position: 0 -433px
+}
+.common-mobContactUsActive {
+    background-position: 0 -453px
+}
+.common-mobFaqs {
+    background-position: 0 -473px
+}
+.common-mobFaqsActive {
+    background-position: 0 -493px
+}
+.common-mobFav {
+    background-position: 0 -513px
+}
+.common-mobFavActive {
+    background-position: 0 -535px
+}
+.common-mobFeedback {
+    background-position: 0 -557px
+}
+.common-mobFeedbackActive {
+    background-position: 0 -577px
+}
+.common-mobHome {
+    background-position: 0 -597px
+}
+.common-mobHomeActive {
+    background-position: 0 -617px
+}
+.common-mobListView {
+    background-position: 0 -637px
+}
+.common-mobLocationIcon {
+    background-position: 0 -657px
+}
+.common-mobLogin {
+    background-position: 0 -679px
+}
+.common-mobLoginActive {
+    background-position: 0 -699px
+}
+.common-mobSearch {
+    background-position: 0 -719px
+}
+.common-mobSearchActive {
+    background-position: 0 -739px
+}
+.common-mobShareIcon {
+    background-position: 0 -759px
+}
+.common-mobYPLogo {
+    background-position: 0 -781px
+}
+.common-mobile-menu-black {
+    background-position: 0 -801px
+}
+.common-mobile-menu {
+    background-position: 0 -818px
+}
+.common-mobileBackArrow {
+    background-position: 0 -835px
+}
+.common-mobileBackArrowWhite {
+    background-position: 0 -857px
+}
+.common-openNewLink {
+    background-position: 0 -879px
+}
+.common-phone,
+.eachOPTitleBlock .opContact::before {
+    background-position: 0 -899px
+}
+.common-r0-5 {
+    background-position: 0 -913px
+}
+.common-r1-0 {
+    background-position: 0 -927px
+}
+.common-r1-5 {
+    background-position: 0 -941px
+}
+.common-r2-0 {
+    background-position: 0 -955px
+}
+.common-r2-5 {
+    background-position: 0 -969px
+}
+.common-r3-0 {
+    background-position: 0 -983px
+}
+.common-r3-5 {
+    background-position: 0 -997px
+}
+.common-r4-0 {
+    background-position: 0 -1011px
+}
+.common-r4-5 {
+    background-position: 0 -1025px
+}
+.common-r5-0 {
+    background-position: 0 -1039px
+}
+.common-radio {
+    background-position: 0 -1053px
+}
+.common-radioChecked {
+    background-position: 0 -1067px
+}
+.common-rightArrow,
+.homeFBListBlock .featuredRightArrow::before {
+    background-position: 0 -1081px
+}
+.common-search,
+.searchInputBlock .searchButton .searchIcon {
+    background-position: 0 -1093px
+}
+.common-searchWhite {
+    background-position: 0 -1115px
+}
+.common-thumbsDown {
+    background-position: 0 -1137px
+}
+.common-thumbsUp,
+.opLike::before {
+    background-position: 0 -1151px
+}
+.common-time,
+.opTimings::before {
+    background-position: 0 -1165px
+}
+.common-twitter {
+    background-position: 0 -1179px
+}
+.common-yellow-pages-logo {
+    background-position: 0 -1199px
+}
+.common-youtube {
+    background-position: 0 -1261px
+}
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: none;
+    cursor: pointer;
+    outline: none
+}
+select,
+input[type="text"],
+textarea {
+    -webkit-appearance: none;
+    outline: none
+}
+button[disabled],
+input[disabled] {
+    cursor: default
+}
+input[type="checkbox"],
+input[type="radio"] {
+    padding: 0
+}
+input[type="search"] {
+    -webkit-appearance: textfield
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+    outline: none
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+textarea,
+input[type="text"] {
+    overflow: auto;
+    vertical-align: top;
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Segoe UI", Arial, sans-serif
+}
+input[type="text"],
+input[type="password"] {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    outline: none
+}
+html,
+body {
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Segoe UI", Arial, sans-serif;
+    color: #333;
+    line-height: 1.5;
+    font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility !important;
+    font-weight: normal
+}
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+    color: #999;
+    font-size: 12px
+}
+img {
+    max-width: 100%;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    display: block;
+    height: auto
+}
+a {
+    color: #0e85d9;
+    text-decoration: none;
+    outline: none
+}
+a img {
+    border: none;
+    outline: none
+}
+a:hover {
+    text-decoration: underline
+}
+.common,
+.ypApproved::before,
+.eachFB .eachFBImage .ypApprovedBlock::before,
+.ypApprovedBlock::before,
+.mobileMenu::after,
+.rating::before,
+.eachPopularTitleBlock .eachPopularOtherActions .openNewWindow,
+.eachPopularRight .addFav::before,
+.eachPopularRight .addFav.favActive::before,
+.eachPopularRight .addFav.favActive:hover::before,
+.businessContact::after,
+.eachOPTitleBlock .opContact::after,
+.footerSocialLinks a::before,
+.footerNavList li a.mobHome::before,
+.footerNavList li a.mobCategories::before,
+.footerNavList li a.mobSearch::before,
+.footerNavList li a.mobLogin::before,
+.footerNavList li a.mobAboutUs::before,
+.footerNavList li a.mobContactUs::before,
+.footerNavList li a.mobFeedback::before,
+.footerNavList li a.mobFaqs::before,
+.footerNavList li a.mobCareers::before,
+.footerNavList li a.mobAddBusiness::before,
+.footerNavList li a.mobAdvertise::before,
+.footerNavList li a.mobMyFavorites::before,
+.footerNavList li a.mobMyReviews::before,
+.footerNavList li a.mobMyAccount::before,
+.footerNavList li a.mobChangePassword::before,
+.footerNavList li a.mobSignout::before,
+.footerSocialLinks .footFacebook::before,
+.footerSocialLinks .footTwitter::before,
+.footerSocialLinks .footGooglePlus::before,
+.footerSocialLinks .footYouTube::before,
+.pageNumberNextBtn::before,
+.checkboxLabel .checkboxText::before,
+.radioLabel .checkboxText::before,
+.checkboxLabel .radioText::before,
+.radioLabel .radioText::before,
+.checkboxLabel .checkbox:checked+.checkboxText::before,
+.checkboxLabel .radio:checked+.checkboxText::before,
+.radioLabel .checkbox:checked+.checkboxText::before,
+.radioLabel .radio:checked+.checkboxText::before,
+.checkboxLabel .checkbox:checked+.radioText::before,
+.checkboxLabel .radio:checked+.radioText::before,
+.radioLabel .checkbox:checked+.radioText::before,
+.radioLabel .radio:checked+.radioText::before {
+    background-image: url(https://cdn.yellowpages.in/images/common.png);
+    background-repeat: no-repeat;
+    overflow: hidden
+}
+.businessSprite {
+    background-image: url(https://cdn.yellowpages.in/images/common.png);
+    background-repeat: no-repeat;
+    overflow: hidden
+}
+.container {
+    float: left;
+    width: 100%
+}
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 15px;
+    max-width: 1168px
+}
+.secondaryHeading {
+    font-size: 26px;
+    font-weight: 500;
+    display: block;
+    text-align: left
+}
+.thirdHeading {
+    display: block;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 18px;
+    color: #656565
+}
+.ypApproved,
+.eachFB .eachFBImage .ypApprovedBlock,
+.ypApprovedBlock {
+    width: 22px;
+    height: 22px;
+    font-size: 0;
+    vertical-align: top;
+    display: inline-block;
+    position: relative
+}
+.ypApproved::before,
+.eachFB .eachFBImage .ypApprovedBlock::before,
+.ypApprovedBlock::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    content: "";
+    background-position: 0 0
+}
+.certified {
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: top
+}
+.certified.aaP {
+    color: #e6a131
+}
+.certified.aaM {
+    color: #5aa925
+}
+.greyBg {
+    background-color: #f2f1ef
+}
+.homeHeader {
+    position: relative;
+    z-index: 4
+}
+.mobileMenu {
+    display: block;
+    margin-left: -15px;
+    margin-right: -15px;
+    font-size: 22px;
+    position: relative;
+    padding-left: 46px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    color: white;
+    font-weight: 500;
+    height: 60px;
+    z-index: 6;
+    float: left;
+    cursor: pointer
+}
+.mobileMenu::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 6px;
+    right: 0;
+    width: 27px;
+    height: 17px;
+    background-position: 0 -818px
+}
+.branding,
+.topMenu {
+    display: none
+}
+.rating {
+    width: 100px;
+    height: 14px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    font-size: 0
+}
+.rating::before {
+    content: "";
+    width: 100px;
+    height: 14px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden
+}
+.rating.no-rating,
+.rating.noRating {
+    font-size: 13px;
+    color: #888;
+    height: 20px;
+    width: 100%
+}
+.rating.no-rating::before,
+.rating.noRating::before {
+    display: none;
+    background-image: none
+}
+.rating.r0-0::before {
+    background-position: 0 -1499px
+}
+.rating.r0-5::before {
+    background-position: 0 -913px
+}
+.rating.r1-0::before {
+    background-position: 0 -927px
+}
+.rating.r1-5::before {
+    background-position: 0 -941px
+}
+.rating.r2-0::before {
+    background-position: 0 -955px
+}
+.rating.r2-5::before {
+    background-position: 0 -969px
+}
+.rating.r3-0::before {
+    background-position: 0 -983px
+}
+.rating.r3-5::before {
+    background-position: 0 -997px
+}
+.rating.r4-0::before {
+    background-position: 0 -1011px
+}
+.rating.r4-5::before {
+    background-position: 0 -1025px
+}
+.rating.r5-0::before {
+    background-position: 0 -1039px
+}
+.notification {
+    background-color: #2a2d32;
+    font-size: 16px;
+    color: #ddd;
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-right: 50px;
+    animation-name: slideUp;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    -webkit-transform: translateY(-110%);
+    -ms-transform: translateY(-110%);
+    -o-transform: translateY(-110%);
+    transform: translateY(-110%);
+    -webkit-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease
+}
+.notification.showNotification {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    animation-name: slideDown;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s
+}
+.notification.green {
+    background-color: #43A047
+}
+.notification.orange {
+    background-color: #EF6C00
+}
+.notification.red {
+    background-color: #F44336
+}
+.notificationText {
+    padding: 10px;
+    float: left;
+    width: 100%;
+    display: block;
+    color: white;
+    text-align: center
+}
+.notificationText.left {
+    text-align: left
+}
+.notificationText.right {
+    text-align: right
+}
+.notificationText.notificationMessage {
+    padding: 6px
+}
+.notificationBtn {
+    display: inline-block;
+    padding: 4px 30px;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    color: white;
+    margin: 7px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease
+}
+.notificationBtn:hover {
+    background-color: #ffcf05;
+    color: black;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease
+}
+.closeNotification {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    font-size: 0;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -15px;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    -ms-border-radius: 1000px;
+    -o-border-radius: 1000px;
+    border-radius: 1000px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: block
+}
+.closeNotification::before {
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    -webkit-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    -o-transform: scale(0.75);
+    transform: scale(0.75)
+}
+.closeNotification:hover {
+    opacity: .8
+}
+.actionsBlock {
+    display: block
+}
+@media only screen and (min-width: 768px) {
+    .actionsBlock {
+        display: inline-block
+    }
+    .notificationText {
+        padding: 20px
+    }
+    .notificationText.notificationMessage {
+        padding: 10px
+    }
+}
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translateY(-110%);
+        -ms-transform: translateY(-110%);
+        -o-transform: translateY(-110%);
+        transform: translateY(-110%);
+        -webkit-transition: transform 0.3s ease;
+        -o-transition: transform 0.3s ease;
+        transition: transform 0.3s ease
+    }
+    90% {
+        -webkit-transform: translateY(5%);
+        -ms-transform: translateY(5%);
+        -o-transform: translateY(5%);
+        transform: translateY(5%);
+        -webkit-transition: transform 0.3s ease;
+        -o-transition: transform 0.3s ease;
+        transition: transform 0.3s ease
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        transform: translateY(0%);
+        -webkit-transition: transform 0.3s ease;
+        -o-transition: transform 0.3s ease;
+        transition: transform 0.3s ease
+    }
+}
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        transform: translateY(0%);
+        -webkit-transition: transform 0.3s ease;
+        -o-transition: transform 0.3s ease;
+        transition: transform 0.3s ease
+    }
+    10% {
+        -webkit-transform: translateY(5%);
+        -ms-transform: translateY(5%);
+        -o-transform: translateY(5%);
+        transform: translateY(5%);
+        -webkit-transition: transform 0.3s ease;
+        -o-transition: transform 0.3s ease;
+        transition: transform 0.3s ease
+    }
+    100% {
+        -webkit-transform: translateY(-110%);
+        -ms-transform: translateY(-110%);
+        -o-transform: translateY(-110%);
+        transform: translateY(-110%);
+        -webkit-transition: transform 0.3s ease;
+        -o-transition: transform 0.3s ease;
+        transition: transform 0.3s ease
+    }
+}
+.home-sprite,
+.home-googlePlayStore,
+.appsDownloadBtns a.androidBtn,
+.home-iosStore,
+.appsDownloadBtns a.iosBtn,
+.home-leftGreyArrow,
+.fbListLeftArrow::after,
+.homeFBListBlock .slick-arrow.slick-prev::before,
+.home-mobileAppsImage,
+.appsDownloadPhoneImage,
+.home-rightGreyArrow,
+.homeFBListBlock .slick-arrow.slick-next::before {
+    background-image: url('https://cdn.yellowpages.in/images/home-sf20d7354f9.png');
+    background-repeat: no-repeat
+}
+.home-googlePlayStore,
+.appsDownloadBtns a.androidBtn {
+    background-position: 0 0
+}
+.home-iosStore,
+.appsDownloadBtns a.iosBtn {
+    background-position: 0 -45px
+}
+.home-leftGreyArrow,
+.fbListLeftArrow::after,
+.homeFBListBlock .slick-arrow.slick-prev::before {
+    background-position: 0 -90px
+}
+.home-mobileAppsImage,
+.appsDownloadPhoneImage {
+    background-position: 0 -145px
+}
+.home-rightGreyArrow,
+.homeFBListBlock .slick-arrow.slick-next::before {
+    background-position: 0 -477px
+}
+.icons-sprite,
+.icons-beauty-salon,
+.icons-builder,
+.icons-doctor,
+.icons-electrician,
+.icons-florist,
+.icons-hair-dresser,
+.icons-mechanic,
+.icons-plumber,
+.icons-restaurant {
+    background-image: url('https://cdn.yellowpages.in/images/icons-s9cc340642c.png');
+    background-repeat: no-repeat
+}
+.icons-beauty-salon {
+    background-position: 0 0
+}
+.icons-builder {
+    background-position: 0 -75px
+}
+.icons-doctor {
+    background-position: 0 -150px
+}
+.icons-electrician {
+    background-position: 0 -225px
+}
+.icons-florist {
+    background-position: 0 -300px
+}
+.icons-hair-dresser {
+    background-position: 0 -375px
+}
+.icons-mechanic {
+    background-position: 0 -450px
+}
+.icons-plumber {
+    background-position: 0 -525px
+}
+.icons-restaurant {
+    background-position: 0 -600px
+}
+.home-banner {
+    background-image: url(https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Data-Full-HD-Background-PIC-WPB0010538.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: -60px;
+    z-index: 2;
+    min-height: 500px;
+    padding-top: 100px;
+    color: white
+}
+.searchBlock {
+    display: block
+}
+.searchBlock .searchTitle {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-bottom: 10px
+}
+.searchInputBlock {
+    width: 290px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative
+}
+.searchInputBlock .locationInputField {
+    width: 100%;
+    float: left;
+    height: 50px;
+    display: block;
+    background: url(https://cdn.yellowpages.in/images/location.png) no-repeat 10px center;
+    background-color: white;
+    padding-left: 36px;
+    border: none;
+    border-left: 1px solid #DDD;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+    border-radius: 5px
+}
+.searchInputBlock .locationInputField::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    width: 14px;
+    height: 17px
+}
+.searchInputBlock .searchTextbox {
+    float: left;
+    width: 238px;
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    font-size: 14px;
+    display: block;
+    padding: 8px 12px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    font-weight: 400
+}
+.searchInputBlock .searchTextbox:focus {
+    cursor: auto
+}
+.searchInputBlock .searchButton {
+    display: block;
+    float: left;
+    width: 52px;
+    height: 50px;
+    background-color: #ffcf05;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 0;
+    cursor: pointer
+}
+.searchInputBlock .searchButton .searchIcon {
+    width: 22px;
+    height: 22px;
+    display: block;
+    border: none;
+    margin-left: 8px;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 14px
+}
+.homeCategoriesBlock {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    float: left;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top: 70px
+}
+.homeCategoriesList {
+    height: 210px;
+    overflow: hidden
+}
+.homeCategoriesList li {
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin-bottom: 10px;
+    min-height: 102px;
+    -moz-transition: width .3s ease;
+    -o-transition: width .3s ease;
+    -webkit-transition: width .3s ease;
+    transition: width .3s ease
+}
+.homeCategoriesList li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    line-height: 1.3
+}
+.homeSearchBlock,
+.searchFullBlock {
+    display: block;
+    float: left;
+    width: 100%
+}
+.searchFullBlock {
+    position: relative
+}
+.searchBusiness {
+    width: 100%;
+    position: relative
+}
+.searchButtonBlock {
+    position: absolute;
+    right: 0;
+    top: 60px
+}
+.searchBusiness,
+.searchLocation {
+    float: left;
+    position: relative;
+    width: 100%
+}
+.searchBusiness {
+    margin-top: 10px
+}
+.homeSearchTextbox {
+    float: left;
+    color: black;
+    border: none;
+    height: 50px;
+    background-color: white;
+    font-size: 14px;
+    padding: 8px 12px;
+    cursor: pointer;
+    width: 97%
+}
+@media only screen and (min-width: 768px) {
+    .homeSearchTextbox {
+        width: 100%
+    }
+}
+.businessInputField {
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important
+}
+.searchButton {
+    float: left;
+    width: 52px;
+    position: relative
+}
+.searchResult {
+    position: absolute;
+    float: left;
+    left: 0;
+    width: 100%;
+    top: 40px;
+    height: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease
+}
+@media only screen and (min-width: 768px) {
+    .searchResult {
+        top: 48px
+    }
+}
+.searchResultList {
+    float: left;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-top: 0;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    overflow: hidden
+}
+.searchResultList li {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    color: #000;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px
+}
+.searchResultList li a {
+    font-size: 14px;
+    display: block;
+    float: left;
+    width: 100%
+}
+.searchResultList li .areaName {
+    display: block;
+    margin-top: 2px;
+    font-size: 12px;
+    column-rule: #666
+}
+.searchResultList li strong {
+    font-weight: 500;
+    color: black
+}
+.searchResultList li:hover,
+.searchResultList li.hover,
+.searchResultList li.active {
+    background-color: #EEE;
+    color: black
+}
+.searchResultList li:last-child {
+    border-bottom: none
+}
+.activeSearchTextbox {
+    height: auto;
+    visibility: visible;
+    z-index: 9;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+    -webkit-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease
+}
+.resultTypeHeading {
+    display: block;
+    float: left;
+    width: 100%;
+    background-color: #EEE;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 10px;
+    color: #333
+}
+.eachHomeCategory {
+    max-width: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 13px
+}
+.eachHomeCategory .eachCategoryIcon {
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ffcf05;
+    position: relative;
+    border-radius: 5000px;
+    -moz-transition: background-color .3s ease;
+    -o-transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+    background-size: cover;
+    background-position: center
+}
+.eachHomeCategory .eachCategoryIcon::before {
+    content: "";
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    left: -9px;
+    top: -9px;
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    -moz-transition: -moz-transform .3s ease;
+    -o-transition: -o-transform .3s ease;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: transform .3s ease
+}
+.eachHomeCategory .eachCategoryIcon:hover {
+    background-color: #ffcf05;
+    -moz-transition: background-color .3s ease;
+    -o-transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease
+}
+.eachHomeCategory .eachCategoryname {
+    margin-top: 7px
+}
+.homeFBBlock {
+    margin-top: 25px;
+    margin-bottom: 25px
+}
+.homeFBBlock .secondaryHeading {
+    padding-bottom: 15px
+}
+.homeFBList {
+    display: block;
+    overflow: hidden;
+    max-width: 1138px;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease
+}
+.homeFBList.slick-initialized {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease
+}
+.homeFBList li {
+    float: left;
+    width: 100%
+}
+.eachFB {
+    display: block;
+    max-width: 190px;
+    margin-left: auto;
+    margin-right: auto
+}
+.eachFB .eachFBImage {
+    width: 100%;
+    max-width: 190px;
+    height: 125px;
+    overflow: hidden;
+    position: relative
+}
+.eachFB .eachFBImage img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto
+}
+.eachFB .eachFBImage .ypApprovedBlock {
+    position: absolute;
+    right: 10px;
+    top: 10px
+}
+.eachFB .eachFBLink {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+.eachFB .eachFBRatingBlock {
+    font-size: 12px;
+    margin: 10px 0 5px 0;
+    height: 18px;
+    overflow: hidden
+}
+.eachFB .eachFBRatingBlock .ratingCountLink {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px
+}
+.eachFB .eachFBLocation {
+    font-size: 14px
+}
+.homeFBListBlock {
+    width: 100%;
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px
+}
+.fbListRightArrow,
+.fbListLeftArrow {
+    display: none
+}
+.ypApprovedBlock {
+    position: absolute;
+    right: 10px;
+    top: 10px
+}
+.viewAllFB {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px
+}
+.viewAllFB .viewAllFBLink {
+    background-color: #ffcf05;
+    border: 2px solid #ffcf05;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    border-radius: 2px
+}
+.viewAllFB .viewAllFBLink:hover {
+    background-color: #fff10a;
+    text-decoration: none;
+    border-color: #fff10a;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease
+}
+.popularThisWeekList {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    background-color: white
+}
+@media only screen and (min-width: 980px) {
+    .popularThisWeekList {
+        background-color: transparent
+    }
+}
+.popularThisWeekList>li {
+    padding-bottom: 6px;
+    margin-bottom: 5px
+}
+.eachPopular {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: white;
+    float: left;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd
+}
+.eachPopular.borderTop {
+    border-top: 1px solid #ddd
+}
+.eachPopularLeft {
+    float: left;
+    width: 100%
+}
+.eachPopularLeft .eachPopularImage {
+    display: none;
+    cursor: pointer
+}
+.popularTitleTextBlock {
+    width: 100%;
+    display: block
+}
+.eachPopularTitleBlock {
+    display: block;
+    position: relative
+}
+.eachPopularTitleBlock .eachPopularTitle {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.2;
+    font-size: 18px;
+    padding-right: 55px;
+    vertical-align: top;
+    margin-top: -2px
+}
+.eachPopularTitleBlock .eachPopularTitle.advtPlus {
+    position: relative
+}
+.eachPopularTitleBlock .eachPopularTitle.advtPlus::before {
+    content: "Ad";
+    background-color: #ffcf05;
+    display: inline-block;
+    padding: 1px 6px;
+    color: white;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-right: 4px;
+    letter-spacing: 1px;
+    vertical-align: top;
+    margin-top: 3px
+}
+.eachPopularTitleBlock .eachPopularOtherActions {
+    position: absolute;
+    right: 0px;
+    top: -3px;
+    text-align: right
+}
+.eachPopularTitleBlock .eachPopularOtherActions .openNewWindow {
+    background-position: 0 -879px;
+    display: none
+}
+.eachPopularTitleBlock .eachPopularOtherActions .ypApproved,
+.eachPopularTitleBlock .eachPopularOtherActions .ypApprovedBlock {
+    width: 22px;
+    height: 22px;
+    margin-right: 3px;
+    display: none
+}
+@media only screen and (min-width: 980px) {
+    .eachPopularTitleBlock .eachPopularOtherActions .ypApproved,
+    .eachPopularTitleBlock .eachPopularOtherActions .ypApprovedBlock {
+        display: block
+    }
+}
+.eachPopularTitleBlock .eachPopularOtherActions .ypApproved::before,
+.eachPopularTitleBlock .eachPopularOtherActions .ypApprovedBlock::before {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
+    transform: scale(0.7)
+}
+.eachPopularTitleBlock .eachPopularOtherActions .certified {
+    font-weight: 500;
+    font-size: 12px;
+    display: none
+}
+@media only screen and (min-width: 980px) {
+    .eachPopularTitleBlock .eachPopularOtherActions .certified {
+        display: block
+    }
+}
+.eachPopularRatingBlock {
+    margin-top: 8px
+}
+.eachPopularRatingBlock .rating {
+    display: inline-block
+}
+.eachPopularRatingBlock .ratingCount {
+    display: inline-block;
+    font-size: 13px;
+    margin-left: 5px;
+    color: #0e85d9;
+    vertical-align: top
+}
+.eachPopularRatingBlock .ratingCount span {
+    display: none
+}
+.eachPopularRatingBlock .ratingCount:hover {
+    text-decoration: underline
+}
+.eachPopularRatingBlock .ratingCount:hover span {
+    text-decoration: underline
+}
+.openNow {
+    display: block;
+    font-size: 13px
+}
+.openNow strong {
+    font-weight: 400;
+    color: #5aa925
+}
+.claimBlock,
+.eachPopularLink,
+.businessMapDirections,
+.eachPopBusinsReview {
+    display: none
+}
+.eachPopularRight {
+    display: block;
+    font-size: 12px
+}
+.eachPopularRight .addFav {
+    display: none
+}
+.eachPopularRight .addFav::before {
+    background-position: 0 -142px
+}
+.eachPopularRight .addFav.favActive::before {
+    background-position: 0 -162px
+}
+.eachPopularRight .addFav.favActive:hover::before {
+    background-position: 0 -182px
+}
+.eachPopularRight .directionsLocationsBlock {
+    display: none
+}
+.eachPopularRight .businessArea {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+.eachPopularRight .businessMapDirections {
+    display: none
+}
+.businessContact,
+.eachOPTitleBlock .opContact {
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 27px
+}
+@media only screen and (min-width: 768px) {
+    .businessContact,
+    .eachOPTitleBlock .opContact {
+        right: 15px
+    }
+}
+.businessContact::after,
+.eachOPTitleBlock .opContact::after {
+    content: "";
+    width: 26px;
+    height: 26px;
+    overflow: hidden;
+    position: absolute;
+    right: 0px;
+    top: 6px;
+    background-position: 0 -22px
+}
+.eachPopularTagsList {
+    padding-top: 7px;
+    font-size: 13px;
+    padding-right: 35px
+}
+.eachPopularTagsList li {
+    display: inline-block;
+    margin-right: 3px;
+    font-size: 13px
+}
+.eachPopularTagsList a {
+    color: #333;
+    font-size: 13px
+}
+.homePopular {
+    background-color: #f2f1ef;
+    padding: 25px 0
+}
+.popularLeftBlock {
+    display: block;
+    width: 100%;
+    clear: both
+}
+.popularThisWeekBlock {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 10px 15px;
+    background-color: white
+}
+.otherPopular {
+    display: block;
+    clear: both
+}
+.otherPopular li {
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #f2f1ef;
+    min-height: 88px;
+    width: 100%;
+    display: block;
+    clear: both
+}
+.otherPopular li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0
+}
+.eachOP {
+    display: block;
+    position: relative
+}
+.eachOPImage {
+    position: absolute;
+    right: -7px;
+    top: -10px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer
+}
+.eachOPImage img {
+    width: 0;
+    display: none;
+    cursor: pointer
+}
+.eachOPImage .ypApprovedBlock {
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7)
+}
+.eachOPTitleBlock {
+    display: block;
+    vertical-align: top;
+    position: relative
+}
+.eachOPTitleBlock .eachOPTitle {
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 18px;
+    padding-right: 30px;
+    float: left;
+    width: 100%
+}
+.eachOPTitleBlock .opRating {
+    margin-top: 8px
+}
+.eachOPTitleBlock .opContact {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    top: 29px
+}
+.eachOPTitleBlock .opContact:hover {
+    text-decoration: none
+}
+.eachOPTitleBlock .ratingCount {
+    color: #333;
+    margin-left: 6px;
+    font-size: 13px;
+    vertical-align: top
+}
+.eachOPTitleBlock .ratingCount span {
+    display: none
+}
+.opTimings {
+    font-size: 13px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+.opTimings .day {
+    color: #5aa925
+}
+.opAddress {
+    font-size: 12px;
+    display: block;
+    color: #333
+}
+.opFavLike,
+.opViewDetails {
+    display: none
+}
+.popularRightBlock {
+    -webkit-transform: translateX(-110%);
+    -ms-transform: translateX(-110%);
+    -o-transform: translateX(-110%);
+    transform: translateX(-110%);
+    display: none;
+    -webkit-transition: transform, height 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease
+}
+.mobileAppsDownload {
+    display: none
+}
+.homeFBListBlock .slick-slider {
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent
+}
+.homeFBListBlock .slick-slide {
+    outline: none
+}
+.homeFBListBlock .slick-dots {
+    display: block;
+    text-align: center;
+    margin: 15px 0 0px 0
+}
+.homeFBListBlock .slick-dots>li {
+    display: inline-block;
+    width: auto;
+    margin: 0 5px;
+    float: none;
+    outline: none
+}
+.homeFBListBlock .slick-dots>li button {
+    width: 5px;
+    height: 5px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    overflow: hidden;
+    display: block;
+    font-size: 0;
+    background-color: transparent;
+    padding: 0
+}
+.homeFBListBlock .slick-dots>li.slick-active button {
+    background-color: #CCC
+}
+.homeFBListBlock .slick-arrow {
+    position: absolute;
+    top: 20%;
+    width: 45px;
+    height: 45px;
+    display: block;
+    z-index: 9;
+    font-size: 0;
+    background-color: #ffcf05;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    -ms-border-radius: 1000px;
+    -o-border-radius: 1000px;
+    border-radius: 1000px;
+    border: 2px solid #ffcf05;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75)
+}
+.homeFBListBlock .slick-arrow:hover {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease
+}
+.homeFBListBlock .slick-arrow:hover.slick-next {
+    -webkit-box-shadow: -2px 2px 7px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: -2px 2px 7px 0px rgba(0, 0, 0, 0.35);
+    opacity: 1
+}
+.homeFBListBlock .slick-arrow:hover.slick-prev {
+    -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.35);
+    opacity: 1
+}
+.homeFBListBlock .slick-arrow::before {
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: -7px;
+    width: 23px;
+    height: 55px;
+    display: block;
+    opacity: 0.8;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform: scale(0.35);
+    -ms-transform: scale(0.35);
+    -o-transform: scale(0.35);
+    transform: scale(0.35)
+}
+.homeFBListBlock .slick-arrow.slick-prev {
+    left: 5px
+}
+.homeFBListBlock .slick-arrow.slick-prev::before {
+    left: 7px
+}
+.homeFBListBlock .slick-arrow.slick-next {
+    right: 5px
+}
+.homeFBListBlock .slick-arrow.slick-disabled {
+    opacity: 0.3;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+.homeFBListBlock .slick-arrow.slick-disabled:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: 0.3
+}
+.seachTermBlock {
+    display: block;
+    float: left;
+    width: 366px
+}
+.twitter-typeahead {
+    float: left
+}
+.tt-menu {
+    width: 100%;
+    max-width: 366px;
+    margin-top: -5px;
+    background-color: white;
+    border: 1px solid #DDD;
+    border-top: 0;
+    font-size: 14px;
+    -moz-border-radius-bottomleft: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    top: 50px !important
+}
+.tt-menu .tt-suggestion {
+    color: #666;
+    border-bottom: 1px solid #DDD;
+    padding: 5px 15px;
+    display: block;
+    cursor: pointer;
+    font-size: 14px
+}
+.tt-menu .tt-suggestion:hover,
+.tt-menu .tt-suggestion.tt-cursor {
+    background-color: #EFEFEF
+}
+.homeFBListBlock .featuredRightArrow,
+.homeFBListBlock .featuredLeftArrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid #ddd;
+    z-index: 6;
+    overflow: hidden;
+    border-radius: 1000px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #aaa;
+    font-size: 0
+}
+.homeFBListBlock .featuredRightArrow::before,
+.homeFBListBlock .featuredLeftArrow::before {
+    content: "";
+    width: 8px;
+    height: 12px;
+    position: absolute;
+    top: 14px
+}
+.homeFBListBlock .featuredRightArrow.disabledArrow,
+.homeFBListBlock .featuredLeftArrow.disabledArrow {
+    opacity: 0.3
+}
+.homeFBListBlock .featuredRightArrow {
+    right: 0
+}
+.homeFBListBlock .featuredRightArrow::before {
+    right: 14px
+}
+.homeFBListBlock .featuredLeftArrow {
+    left: 0
+}
+.homeFBListBlock .featuredLeftArrow::before {
+    left: 14px
+}
+.closeBtnNew {
+    display: inline-block;
+    margin-left: 20px;
+    color: #888;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 16px
+}
+.viewReviewsList li {
+    width: 100%
+}
+.req {
+    border: 1px solid red
+}
+.bredcrumBlock {
+    padding: 20px 0 20px 0;
+    display: none;
+    font-size: 14px
+}
+.bredcrumBlock span {
+    margin: 0 3px
+}
+.footer {
+    overflow: hidden
+}
+.footer .footerHeading,
+.footer .checkCallers {
+    display: none
+}
+.footer .footerHeading {
+    display: none
+}
+.footer .footerHeading.ypFooterHeading {
+    display: block
+}
+.copyRights {
+    background-color: #3b3f40;
+    padding: 15px 0;
+    font-size: 13px;
+    text-align: center;
+    color: white
+}
+.footerSocialLinks a.footFacebook::before {
+    background-position: 0 -122px
+}
+.footerSocialLinks a.footTwitter::before {
+    background-position: 0 -1179px
+}
+.footerSocialLinks a.footGooglePlus::before {
+    background-position: 0 -230px
+}
+.footerSocialLinks a.footYouTube::before {
+    background-position: 0 -1261px
+}
+.footerNavBlocks {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 260px;
+    bottom: 0;
+    background-color: white;
+    z-index: 99;
+    color: #333;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
+    -webkit-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease
+}
+.footerNavBlocks.mobHide {
+    -webkit-transform: translate(-110%, 0%);
+    -ms-transform: translate(-110%, 0%);
+    -o-transform: translate(-110%, 0%);
+    transform: translate(-110%, 0%);
+    -webkit-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease
+}
+.footerNavList {
+    display: block
+}
+.footerNavList li {
+    display: block
+}
+.footerNavList li.mobileShow {
+    display: block
+}
+.footerNavList li.desktopShow {
+    display: none
+}
+.footerNavList li a {
+    color: #333;
+    position: relative;
+    padding: 12px 30px 12px 50px;
+    display: block;
+    cursor: pointer
+}
+.footerNavList li a::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 14px;
+    left: 12px;
+    position: absolute
+}
+.footerNavList li a:hover {
+    text-decoration: none;
+    color: #333;
+    opacity: .8
+}
+.footerNavList li a.mobHome::before {
+    background-position: 0 -597px
+}
+.footerNavList li a.mobCategories::before {
+    background-position: 0 -393px
+}
+.footerNavList li a.mobSearch {
+    display: none
+}
+.footerNavList li a.mobSearch::before {
+    background-position: 0 -719px
+}
+.footerNavList li a.mobLogin::before {
+    background-position: 0 -679px
+}
+.footerNavList li a.mobAboutUs::before {
+    background-position: 0 -313px
+}
+.footerNavList li a.mobContactUs::before {
+    background-position: 0 -433px
+}
+.footerNavList li a.mobFeedback::before {
+    background-position: 0 -557px
+}
+.footerNavList li a.mobFaqs::before {
+    background-position: 0 -473px
+}
+.footerNavList li a.mobCareers::before {
+    background-position: 0 -353px
+}
+.footerNavList li a.mobAddBusiness::before {
+    background-position: 0 -1322px
+}
+.footerNavList li a.mobAdvertise::before {
+    background-position: 0 -1291px
+}
+.footerNavList li a.mobMyFavorites::before {
+    background-position: 0 -1409px
+}
+.footerNavList li a.mobMyReviews::before {
+    background-position: 0 -1439px
+}
+.footerNavList li a.mobMyAccount::before {
+    background-position: 0 -1379px
+}
+.footerNavList li a.mobChangePassword::before {
+    background-position: 0 -1349px
+}
+.footerNavList li a.mobSignout::before {
+    background-position: 0 -1469px
+}
+.footerNavList li a.mobPrivacyPolicy,
+.footerNavList li a.mobTermsConditions,
+.footerNavList li a.mobAcceptancePolicy {
+    padding-left: 10px
+}
+.footerNavList li.active a {
+    background-color: #ffcf05;
+    color: #333
+}
+.footerNavList li.active a.mobHome::before {
+    background-position: 0 -617px
+}
+.footerNavList li.active a.mobCategories::before {
+    background-position: 0 -413px
+}
+.footerNavList li.active a.mobSearch::before {
+    background-position: 0 -739px
+}
+.footerNavList li.active a.mobLogin::before {
+    background-position: 0 -699px
+}
+.footerNavList li.active a.mobAboutUs::before {
+    background-position: 0 -333px
+}
+.footerNavList li.active a.mobContactUs::before {
+    background-position: 0 -453px
+}
+.footerNavList li.active a.mobFeedback::before {
+    background-position: 0 -577px
+}
+.footerNavList li.active a.mobFaqs::before {
+    background-position: 0 -493px
+}
+.footerNavList li.active a.mobCareers::before {
+    background-position: 0 -373px
+}
+.ypFooterHeading {
+    margin-top: 25px;
+    display: block;
+    background-color: #ebebeb;
+    position: relative;
+    padding: 12px 30px 12px 15px;
+    color: #333
+}
+.footerSocialLinks {
+    background-color: #ebebeb;
+    padding: 15px
+}
+.footerSocialLinks .footerSocialMobTitle {
+    display: block
+}
+.footerSocialLinks .footFacebook,
+.footerSocialLinks .footTwitter,
+.footerSocialLinks .footGooglePlus,
+.footerSocialLinks .footYouTube {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+    border: 1px solid #CCC;
+    border-radius: 5000px;
+    font-size: 0
+}
+.footerSocialLinks .footFacebook:hover,
+.footerSocialLinks .footTwitter:hover,
+.footerSocialLinks .footGooglePlus:hover,
+.footerSocialLinks .footYouTube:hover {
+    background-color: #666
+}
+.footerSocialLinks .footFacebook::before,
+.footerSocialLinks .footTwitter::before,
+.footerSocialLinks .footGooglePlus::before,
+.footerSocialLinks .footYouTube::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    display: block
+}
+.footerSocialLinks .footFacebook::before {
+    background-position: 0 -122px
+}
+.footerSocialLinks .footTwitter::before {
+    background-position: 0 -1179px
+}
+.footerSocialLinks .footGooglePlus::before {
+    background-position: 0 -230px
+}
+.footerSocialLinks .footYouTube::before {
+    background-position: 0 -1261px
+}
+.pageNumberNextBtn::before {
+    background-position: 0 -1081px
+}
+.hiddenTitle {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    font-size: 0
+}
+.checkboxLabel,
+.radioLabel {
+    display: block;
+    position: relative;
+    cursor: pointer
+}
+.checkboxLabel .checkboxText,
+.checkboxLabel .radioText,
+.radioLabel .checkboxText,
+.radioLabel .radioText {
+    font-size: 14px;
+    display: block;
+    padding-left: 20px;
+    position: relative
+}
+.checkboxLabel .checkboxText::before,
+.checkboxLabel .radioText::before,
+.radioLabel .checkboxText::before,
+.radioLabel .radioText::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: 0;
+    top: 2px
+}
+.checkboxLabel .checkboxText::before,
+.radioLabel .checkboxText::before {
+    background-position: 0 -48px
+}
+.checkboxLabel .radioText::before,
+.radioLabel .radioText::before {
+    background-position: 0 -1053px
+}
+.checkboxLabel .checkbox,
+.checkboxLabel .radio,
+.radioLabel .checkbox,
+.radioLabel .radio {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 1px
+}
+.checkboxLabel .checkbox:checked+.checkboxText::before,
+.checkboxLabel .radio:checked+.checkboxText::before,
+.radioLabel .checkbox:checked+.checkboxText::before,
+.radioLabel .radio:checked+.checkboxText::before {
+    background-position: 0 -62px
+}
+.checkboxLabel .checkbox:checked+.radioText::before,
+.checkboxLabel .radio:checked+.radioText::before,
+.radioLabel .checkbox:checked+.radioText::before,
+.radioLabel .radio:checked+.radioText::before {
+    background-position: 0 -1067px
+}
+.overlayMobNav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 92;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer
+}
+body.noScroll {
+    overflow: hidden
+}
+.scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    font-size: 0;
+    overflow: hidden;
+    z-index: 5;
+    border-radius: 1000px;
+    -webkit-transform: translateX(150%);
+    -ms-transform: translateX(150%);
+    -o-transform: translateX(150%);
+    transform: translateX(150%);
+    -webkit-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease
+}
+.scrollToTop.show {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease
+}
+.scrollToTop::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-left: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    left: 13px;
+    top: 15px;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg)
+}
+.scrollToTop:hover {
+    background-color: #000
+}
+.popup-sprite,
+.popup-close,
+.popupNew .popupHeader .popupClose::before,
+.popup-leftArrow,
+.bDetailImagesCrousel .slick-arrow.slick-prev::before,
+.popup-rightArrow,
+.bDetailImagesCrousel .slick-arrow.slick-next::before {
+    background-image: url('https://cdn.yellowpages.in/images/popup-s9505b2ad1a.png');
+    background-repeat: no-repeat
+}
+.popup-close,
+.popupNew .popupHeader .popupClose::before {
+    background-position: 0 0
+}
+.popup-leftArrow,
+.bDetailImagesCrousel .slick-arrow.slick-prev::before {
+    background-position: 0 -18px
+}
+.popup-rightArrow,
+.bDetailImagesCrousel .slick-arrow.slick-next::before {
+    background-position: 0 -30px
+}
+.popupNew {
+    overflow: hidden;
+    height: 0;
+    width: 0
+}
+.popupNew .popupOverlayNew {
+    opacity: 0;
+    -moz-transition: opacity .5s ease;
+    -o-transition: opacity .5s ease;
+    -webkit-transition: opacity .5s ease;
+    transition: opacity .5s ease
+}
+.popupNew .popupMainBlock {
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 3;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px;
+    -moz-transform: translateY(-200%);
+    -ms-transform: translateY(-200%);
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+    -moz-transition: -moz-transform .3s ease;
+    -o-transition: -o-transform .3s ease;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    overflow: hidden;
+    -webkit-box-shadow: 0 4px 8px #333;
+    box-shadow: 0 4px 8px #333
+}
+.popupNew .popupHeader {
+    background-color: #6c6c6c;
+    color: white;
+    font-weight: 300;
+    padding: 10px 25px 10px 20px;
+    position: relative
+}
+.popupNew .popupHeader .popupTitle {
+    display: block;
+    font-size: 22px;
+    font-weight: 300
+}
+.popupNew .popupHeader .popupClose {
+    font-size: 0;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer
+}
+.popupNew .popupHeader .popupClose::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    display: block;
+    position: absolute;
+    left: 1px;
+    top: 1px
+}
+.popupNew.showPopup {
+    width: auto;
+    height: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow-y: auto
+}
+.popupNew.showPopup .popupOverlayNew {
+    opacity: 1;
+    -moz-transition: opacity .3s ease;
+    -o-transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    z-index: 1
+}
+.popupNew.showPopup .popupMainBlock {
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    -moz-transition: -moz-transform .3s ease;
+    -o-transition: -o-transform .3s ease;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: transform .3s ease
+}
+.popupContent {
+    padding: 20px;
+    display: block
+}
+.popupFormListBlock {
+    display: block
+}
+.popupFormListBlock .popupFormList {
+    display: block
+}
+.popupFormListBlock .popupFormList li {
+    display: block;
+    padding-bottom: 6px
+}
+.popupFormListBlock .popupFormList li:last-child .eachFormElement {
+    margin-bottom: 0
+}
+.eachFormElement {
+    display: block;
+    position: relative;
+    margin-bottom: 15px
+}
+.eachFormElement .popupFormTextBox,
+.eachFormElement .popupFormTextarea {
+    border: 1px solid #CCC;
+    border-radius: 2px;
+    padding: 8px 15px;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    position: relative;
+    margin-right: 10px;
+    outline: none;
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Segoe UI", Arial, sans-serif
+}
+.eachFormElement .popupFormTextBox.red,
+.eachFormElement .popupFormTextarea.red {
+    border-color: red
+}
+.eachFormElement .popupFormTextBox {
+    height: 40px
+}
+.eachFormElement .popupFormTextarea {
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Segoe UI", Arial, sans-serif
+}
+.eachFormElement .popupFormLabel {
+    position: absolute;
+    z-index: 2;
+    font-size: 12px;
+    color: #666;
+    top: 10px;
+    left: 15px;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    z-index: 2
+}
+.eachFormElement.eachFormElementFocused .popupFormLabel {
+    background-color: white;
+    top: -10px;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    padding: 0px 6px;
+    left: 9px
+}
+.eachFormElement.phone .number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    text-align: center;
+    background-color: #AAA;
+    z-index: 3;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    -moz-border-radius: 2px 0 2px 0;
+    -webkit-border-radius: 2px;
+    border-radius: 2px 0 2px 0;
+    padding-top: 5px
+}
+.eachFormElement.phone .popupFormLabel {
+    left: 55px
+}
+.eachFormElement.phone .popupFormTextBox {
+    padding-left: 55px
+}
+.eachFormElement.phone.eachFormElementFocused .popupFormLabel {
+    background-color: white;
+    top: -10px;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    padding: 0px 6px;
+    left: 46px
+}
+.eachFormElement .popupButton {
+    background-color: #ffcf05;
+    border: 2px solid #ffcf05;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    border-radius: 2px
+}
+.eachFormElement .popupButton:hover {
+    background-color: #fff10a;
+    text-decoration: none;
+    border-color: #fff10a;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease
+}
+.eachFormElement.password {
+    position: relative
+}
+.eachFormElement.password .popupFormTextBox {
+    padding-right: 60px
+}
+.eachFormElement.password .showPassword {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 11px;
+    border-left: 1px solid #ddd;
+    cursor: pointer;
+    height: 40px;
+    width: 50px;
+    text-align: center;
+    padding-top: 12px;
+    z-index: 3
+}
+.eachFormElement.password .showPassword.active {
+    background-color: #EEE
+}
+.cancelButton {
+    display: inline-block;
+    margin-left: 20px;
+    color: #888;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 16px
+}
+.cancelButton:hover {
+    color: #333
+}
+.reportIssueBtn {
+    background-color: #cd424f;
+    border: 2px solid #cd424f;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    border-radius: 2px
+}
+.reportIssueBtn:hover {
+    background-color: #fff10a;
+    text-decoration: none;
+    border-color: #fff10a;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease
+}
+.red .popupHeader {
+    background-color: #cd424f
+}
+.infoBlock {
+    display: block;
+    font-size: 14px
+}
+.inline-list .list {
+    display: inline-block;
+    margin-right: 10px
+}
+.noScroll {
+    overflow: hidden
+}
+.forgotPassword {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 5px 0;
+    font-size: 14px
+}
+.forgotPassword:hover {
+    color: black
+}
+.secondaryTitle {
+    display: block;
+    font-size: 24px;
+    color: #333;
+    padding-bottom: 10px
+}
+.forgotPasswordBlock {
+    display: none
+}
+.imagesPopup .popupMainBlock {
+    background-color: #333
+}
+.bDetailImagesCrousel .slick-list {
+    float: left;
+    width: 100%;
+    overflow: hidden
+}
+.bDetailImagesCrousel .eachbDetalImageBlock {
+    float: left;
+    width: 100%;
+    height: 100%
+}
+.bDetailImagesCrousel .eachbDetalImageBlock img {
+    margin: auto;
+    vertical-align: middle;
+    max-height: 800px
+}
+.bDetailImagesCrousel .slick-arrow {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    -ms-border-radius: 1000px;
+    -o-border-radius: 1000px;
+    border-radius: 1000px;
+    overflow: hidden;
+    background-color: #ffcf05;
+    border: none;
+    font-size: 0;
+    z-index: 2;
+    cursor: pointer
+}
+.bDetailImagesCrousel .slick-arrow:hover {
+    opacity: 0.8
+}
+.bDetailImagesCrousel .slick-arrow::before {
+    content: "";
+    width: 8px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    left: 50%;
+    margin-left: -4px
+}
+.bDetailImagesCrousel .slick-arrow.slick-prev {
+    left: 10px
+}
+.bDetailImagesCrousel .slick-arrow.slick-next {
+    right: 10px
+}
+.bDetailImagesCrousel .slick-arrow.slick-disabled {
+    opacity: 0
+}
+.bDetailImagesCrousel .slick-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    z-index: 5
+}
+.bDetailImagesCrousel .slick-dots li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 0
+}
+.bDetailImagesCrousel .slick-dots li button {
+    width: 10px;
+    height: 10px;
+    font-size: 0;
+    background-color: white;
+    border: none;
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    -ms-border-radius: 1000px;
+    -o-border-radius: 1000px;
+    border-radius: 1000px;
+    overflow: hidden
+}
+.bDetailImagesCrousel .slick-dots li.slick-active button {
+    background-color: #ffcf05
+}
+.socialLoginBlock,
+.loginFormBlock,
+.socialLogins {
+    float: left;
+    width: 100%
+}
+.socialLoginBlock {
+    padding-bottom: 20px
+}
+.socialLogins {
+    text-align: center
+}
+.orBlock {
+    float: left;
+    width: 100%;
+    font-size: 20px;
+    padding-top: 0px;
+    padding-bottom: 15px;
+    color: #888;
+    text-align: center;
+    position: relative;
+    font-size: 14px
+}
+.orBlock::before,
+.orBlock::after {
+    content: "";
+    height: 2px;
+    width: 42%;
+    background-color: #DDD;
+    top: 50%;
+    position: absolute
+}
+.orBlock::before {
+    left: 0
+}
+.orBlock::after {
+    right: 0
+}
+.facebookLogin,
+.twitterLogin,
+.googleLogin {
+    width: 250px;
+    height: 42px;
+    overflow: hidden;
+    display: block;
+    margin: 10px auto;
+    font-size: 0;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer
+}
+.facebookLogin::before,
+.twitterLogin::before,
+.googleLogin::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 42px;
+    overflow: hidden;
+    background: url(https://cdn.yellowpages.in/images/common.png) no-repeat;
+    left: 0;
+    top: 0
+}
+.facebookLogin::before {
+    background-position: 0 -1579px
+}
+.twitterLogin::before {
+    background-position: 0 -1635px
+}
+.googleLogin::before {
+    background-position: 0 -1525px
+}
+.loginSocialBlock {
+    float: left;
+    width: 100%
+}
+.loginSocialBlock.hideForm {
+    display: none
+}
+@media only screen and (min-width: 750px) {
+    .popupNew.showPopup {
+        padding: 20px
+    }
+    .popupNew .popupMainBlock {
+        position: relative
+    }
+    .eachFormElement.eachFormElementInline .radio {
+        display: inline-block;
+        margin-right: 10px
+    }
+    .eachFormElement.twoColumn {
+        display: inline-block;
+        width: 49.5%
+    }
+    .imagesPopup .popupHeader {
+        z-index: 4
+    }
+    .imagesPopup .popupMainBlock {
+        left: 0;
+        right: 0;
+        max-width: inherit;
+        height: 100%
+    }
+    .imagesPopup .popupContent {
+        padding: 0
+    }
+    .imagesPopup .bDetailImagesCrouselBlock,
+    .imagesPopup .bDetailImagesCrousel {
+        display: block;
+        float: left;
+        width: 100%;
+        overflow: hidden;
+        position: relative
+    }
+    .popupFormTwoCols .eachFormElement {
+        width: 49%;
+        display: inline-block
+    }
+}
+.popupNewTitle {
+    font-size: 18px;
+    padding: 10px 15px;
+    font-weight: 600;
+    text-align: left;
+    float: left;
+    width: 100%
+}
+.registrationBlock {
+    float: left;
+    width: 100%;
+    font-size: 14px
+}
+.registrationBlock.hideForm {
+    display: none
+}
+.registrationInfo {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    border-top: 1px solid #DDD;
+    padding: 10px 15px
+}
+.registrationInfo .regBtn,
+.registrationInfo .logBtn {
+    display: inline-block;
+    color: #0e85d9;
+    cursor: pointer
+}
+.errorMessage {
+    color: red;
+    font-size: 13px
+}
+@media only screen and (min-width: 768px) {
+    .main {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transition: transform 0.3s ease;
+        -o-transition: transform 0.3s ease;
+        transition: transform 0.3s ease
+    }
+    .main.showMobMenu {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transition: transform 0.3s ease;
+        -o-transition: transform 0.3s ease;
+        transition: transform 0.3s ease;
+        position: relative
+    }
+    .main .overlayMobNav {
+        display: none !important
+    }
+    .mobileMenu {
+        display: none
+    }
+    .branding,
+    .topMenu {
+        display: block
+    }
+    .headerBlock {
+        margin-top: 10px;
+        margin-bottom: 10px
+    }
+    .headerBlock .branding {
+        float: left;
+        display: block
+    }
+    .topMenu {
+        float: right;
+        display: block;
+        text-align: right;
+        margin-top: 20px
+    }
+    .topMenu .topMenuLink {
+        display: inline-block;
+        padding: 5px 10px;
+        margin-left: 15px;
+        font-size: 16px;
+        color: white
+    }
+    .certified {
+        font-size: 14px
+    }
+    .home-banner {
+        margin-top: -72px;
+        min-height: 740px;
+        padding-top: 260px
+    }
+    .homeFBList li {
+        margin-left: 20px;
+        margin-right: 20px
+    }
+    .searchInputBlock .locationInputField {
+        border-radius: 0
+    }
+    .searchLocation {
+        width: 212px;
+        float: right;
+        right: 51px
+    }
+    .searchButtonBlock {
+        top: 0
+    }
+    .businessInputField {
+        width: 100%
+    }
+    .searchBusiness {
+        max-width: 367px;
+        float: left;
+        margin-top: 0
+    }
+    .searchBlock .searchTitle {
+        font-size: 30px
+    }
+    .searchInputBlock {
+        width: 630px
+    }
+    .searchInputBlock .searchTextbox {
+        width: 366px
+    }
+    .homeCategoriesBlock {
+        margin-top: 0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        -moz-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease
+    }
+    .viewAllFB {
+        margin-top: 26px;
+        text-align: center
+    }
+    .viewAllFB .viewAllFBLink {
+        width: 350px;
+        border-radius: 3px;
+        padding-top: 8px;
+        font-size: 20px
+    }
+    .viewAllFB .viewAllFBLink::before {
+        display: none
+    }
+    .homeFBBlock {
+        margin-top: 40px;
+        margin-bottom: 40px
+    }
+    .homePopular {
+        padding-top: 40px;
+        padding-bottom: 40px
+    }
+    .eachPopular {
+        min-height: 130px;
+        padding: 10px;
+        margin-bottom: 0
+    }
+    .eachPopularLeft .eachPopularImage {
+        display: block;
+        float: left;
+        width: 192px;
+        height: 125px;
+        overflow: hidden
+    }
+    .eachPopularLeft img {
+        width: 100%;
+        height: auto;
+        max-width: 190px
+    }
+    .eachPopularTitleBlock {
+        margin-left: 210px
+    }
+    .eachPopularTagsList {
+        display: block
+    }
+    .eachPopularTagsList li {
+        display: inline-block;
+        margin-bottom: 0;
+        width: auto;
+        float: none
+    }
+    .claimBlock {
+        margin-top: 5px;
+        font-size: 15px;
+        display: block
+    }
+    .eachPopularLink {
+        display: block;
+        width: 100%;
+        float: none;
+        font-size: 14px;
+        margin-top: 10px
+    }
+    .eachPopularLink a {
+        display: inline-block;
+        margin-right: 10px;
+        line-height: 1.2
+    }
+    .otherPopular li {
+        min-height: 134px
+    }
+    .eachOP {
+        background-color: white
+    }
+    .eachOP .eachOPImage {
+        display: block;
+        position: relative;
+        width: 190px;
+        height: 125px;
+        overflow: hidden;
+        float: left;
+        top: 0;
+        right: auto
+    }
+    .eachOP .eachOPImage img {
+        display: block;
+        width: 100%
+    }
+    .eachOP .eachOPImage .ypApprovedBlock {
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+    .eachOPTitleBlock {
+        margin-left: 210px;
+        font-size: 15px
+    }
+    .eachOPTitleBlock .ratingCount {
+        color: #0e85d9
+    }
+    .eachOPTitleBlock .ratingCount span {
+        display: inline
+    }
+    .eachOPTitleBlock .ratingCount:hover {
+        text-decoration: underline
+    }
+    .eachOPTitleBlock .ratingCount:hover span {
+        text-decoration: underline
+    }
+    .opTimings {
+        padding-left: 20px;
+        position: relative;
+        margin-left: 0;
+        font-size: 13px;
+        padding-top: 12px
+    }
+    .opTimings:hover {
+        text-decoration: none
+    }
+    .opTimings::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        left: 0;
+        top: 14px;
+        overflow: hidden;
+        opacity: 0.6
+    }
+    .bredcrumBlock {
+        display: block
+    }
+    .footer {
+        display: block;
+        background-color: #363b3d;
+        color: white;
+        padding: 35px 0
+    }
+    .footer .businessMenu,
+    .footer .checkCallers {
+        display: block
+    }
+    .footer .checkCallers {
+        padding: 5px 0
+    }
+    .footer .checkCallers:hover {
+        opacity: .8;
+        text-decoration: none
+    }
+    .footerNavBlocks {
+        position: relative;
+        background-color: transparent;
+        max-width: inherit;
+        width: 100%;
+        -webkit-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+        -o-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+        -webkit-transition: transform 0.3s ease;
+        -o-transition: transform 0.3s ease;
+        transition: transform 0.3s ease
+    }
+    .footerNavBlocks.mobHide {
+        -webkit-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+        -o-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+        -webkit-transition: transform 0.3s ease;
+        -o-transition: transform 0.3s ease;
+        transition: transform 0.3s ease
+    }
+    .footerSocialMobile {
+        width: 100%;
+        float: right;
+        margin-top: 20px
+    }
+    .footerSocialMobile .footerEachNavCol {
+        width: 100%
+    }
+    .mobileNavBlocks {
+        width: 100%;
+        float: left
+    }
+    .mobileNavBlocks .footerEachNavCol {
+        width: 33.3%
+    }
+    .footerEachNavCol {
+        float: right;
+        font-size: 13px
+    }
+    .footerEachNavCol .footerHeading {
+        color: #ffcf05;
+        font-size: 18px;
+        display: block
+    }
+    .footerEachNavCol a {
+        color: white
+    }
+    .footerNavList li.mobileShow {
+        display: none
+    }
+    .footerNavList li.desktopShow {
+        display: block
+    }
+    .footerNavList li a {
+        padding: 4px 0;
+        display: block;
+        color: white
+    }
+    .footerNavList li a::before {
+        display: none
+    }
+    .footerNavList li a.mobHome {
+        display: none
+    }
+    .footerNavList li a.mobSearch {
+        display: block
+    }
+    .footerNavList li a.mobMyFavorites,
+    .footerNavList li a.mobMyReviews,
+    .footerNavList li a.mobChangePassword,
+    .footerNavList li a.mobSignout {
+        display: none
+    }
+    .footerNavList li a:hover {
+        color: white
+    }
+    .footerNavList li a.mobPrivacyPolicy,
+    .footerNavList li a.mobTermsConditions,
+    .footerNavList li a.mobAcceptancePolicy {
+        padding-left: 0px;
+        font-weight: 400
+    }
+    .footerNavList li.active a {
+        background-color: transparent;
+        color: white
+    }
+    .footerSocialLinks {
+        margin-top: 10px;
+        background-color: transparent;
+        padding: 0
+    }
+    .footerSocialLinks a {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        overflow: hidden;
+        font-size: 0;
+        position: relative;
+        margin-right: 10px
+    }
+    .footerSocialLinks a:hover {
+        opacity: 0.6
+    }
+    .footerSocialLinks a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        display: block
+    }
+    .footerSocialLinks .footerSocialMobTitle {
+        display: none
+    }
+    .ypFooterHeading {
+        background-color: transparent;
+        padding: 0;
+        margin-top: 0
+    }
+    .ypFooterHeading::before {
+        display: none
+    }
+    .overlayMobNav {
+        display: none
+    }
+}
+@media only screen and (min-width: 980px) {
+    .popularThisWeekList>li {
+        display: block;
+        padding-bottom: 0;
+        margin-bottom: 15px;
+        float: left;
+        width: 100%
+    }
+    .popularThisWeekList.sponsoredList>li .eachPopular {
+        background-color: #fef6e1
+    }
+    .eachPopularTagsList {
+        padding-right: 0
+    }
+    .eachPopular {
+        float: left;
+        width: 100%;
+        background-color: white;
+        padding: 10px
+    }
+    .eachPopular:hover .addFav {
+        opacity: 1;
+        -webkit-transition: opacity 0.3s ease;
+        -o-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease
+    }
+    .eachPopularLeft {
+        width: 76%;
+        float: left
+    }
+    .eachPopularLeft .eachPopularImage {
+        width: 150px;
+        height: 120px;
+        margin-right: 10px
+    }
+    .eachPopularLeft .eachPopularTitleBlock {
+        margin-left: 160px
+    }
+    .eachPopularTitleBlock {
+        display: block
+    }
+    .eachPopularTitleBlock .popularTitleTextBlock {
+        display: block;
+        float: left;
+        width: 100%
+    }
+    .eachPopularTitleBlock .popularTitleTextBlock .eachPopularTitle {
+        display: block;
+        padding-right: 0;
+        margin-right: 6px;
+        float: left;
+        max-width: 390px
+    }
+    .eachPopularTitleBlock .popularTitleTextBlock .eachPopularTitle.hasOtherInfo,
+    .eachPopularTitleBlock .popularTitleTextBlock .eachPopularTitle.hasIcons {
+        max-width: 210px
+    }
+    .eachPopularTitleBlock .popularTitleTextBlock .eachPopularOtherActions {
+        float: left;
+        width: 110px;
+        position: relative;
+        right: auto;
+        text-align: left
+    }
+    .eachPopularTitleBlock .eachPopularOtherActions .openNewWindow {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 7px;
+        vertical-align: bottom;
+        cursor: pointer;
+        text-decoration: none;
+        cursor: pointer
+    }
+    .eachPopularTitleBlock .eachPopularOtherActions .openNewWindow:hover {
+        text-decoration: none;
+        opacity: 0.7
+    }
+    .eachPopularTitleBlock .eachPopularOtherActions .openNewWindow::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: block
+    }
+    .eachPopularTitleBlock .eachPopularOtherActions .ypApproved,
+    .eachPopularTitleBlock .eachPopularOtherActions .ypApprovedBlock {
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+        margin-right: 7px;
+        vertical-align: bottom
+    }
+    .eachPopularTitleBlock .eachPopularOtherActions .ypApproved::before,
+    .eachPopularTitleBlock .eachPopularOtherActions .ypApprovedBlock::before {
+        width: 22px;
+        height: 22px;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: transform 0.3s ease;
+        -o-transition: transform 0.3s ease;
+        transition: transform 0.3s ease
+    }
+    .eachPopularTitleBlock .eachPopularOtherActions .certified {
+        font-size: 16px;
+        vertical-align: bottom;
+        cursor: default
+    }
+    .eachPopularRight {
+        width: 23%;
+        float: right;
+        text-align: right;
+        margin-left: 0;
+        position: relative
+    }
+    .eachPopularRight .addFav {
+        display: block;
+        width: 30px;
+        height: 26px;
+        margin-right: 0px;
+        font-size: 0;
+        opacity: 0;
+        -webkit-transition: opacity 0.3s ease;
+        -o-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 3
+    }
+    .eachPopularRight .addFav::before {
+        content: "";
+        width: 27px;
+        height: 20px;
+        overflow: hidden;
+        display: block;
+        position: absolute;
+        right: 0px;
+        top: 3px
+    }
+    .eachPopularRight .addFav.favActive {
+        opacity: 1;
+        -webkit-transition: opacity 0.3s ease;
+        -o-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease
+    }
+    .eachPopularRight .addFav.favActive::before {
+        -webkit-transition: opacity 0.3s ease;
+        -o-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease
+    }
+    .eachPopularRight .addFav.favActive:hover::before {
+        -webkit-transition: opacity 0.3s ease;
+        -o-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease
+    }
+    .eachPopularRight .businessContact,
+    .eachPopularRight .eachOPTitleBlock .opContact,
+    .eachOPTitleBlock .eachPopularRight .opContact {
+        position: relative;
+        font-size: 20px;
+        font-weight: 500;
+        color: #333;
+        width: 100%;
+        cursor: default;
+        height: auto;
+        margin-top: 28px;
+        top: 0
+    }
+    .eachPopularRight .businessContact::after,
+    .eachPopularRight .eachOPTitleBlock .opContact::after,
+    .eachOPTitleBlock .eachPopularRight .opContact::after {
+        display: none
+    }
+    .eachPopularRight .businessContact:hover,
+    .eachPopularRight .eachOPTitleBlock .opContact:hover,
+    .eachOPTitleBlock .eachPopularRight .opContact:hover {
+        text-decoration: none;
+        cursor: default
+    }
+    .eachPopularRight .businessArea {
+        font-size: 13px
+    }
+    .eachPopularRight .businessArea strong {
+        display: block
+    }
+    .eachPopularRight .directionsLocationsBlock {
+        display: block;
+        font-size: 15px;
+        margin-top: 9px;
+        line-height: 1
+    }
+    .eachPopularRight .directionsLocationsBlock .locationsCount {
+        margin-right: 10px;
+        color: #888
+    }
+    .eachPopularRateOpen {
+        display: block
+    }
+    .eachPopularRateOpen.noRating .openNow,
+    .eachPopularRateOpen.no-rating .openNow {
+        margin-left: 203px
+    }
+    .eachPopularRatingBlock {
+        width: 180px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 10px
+    }
+    .eachPopularRatingBlock .ratingCount {
+        color: #0e85d9;
+        vertical-align: top;
+        font-size: 12px
+    }
+    .eachPopularRatingBlock .ratingCount span {
+        display: inline-block
+    }
+    .openNow {
+        font-size: 14px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 8px;
+        margin-left: 20px
+    }
+    .eachPopBusinsReview {
+        display: block;
+        margin-top: 9px;
+        font-size: 15px;
+        height: 40px;
+        overflow: hidden
+    }
+    .eachPopBusinsReview .eachPopBusinsReviewPhoto {
+        float: left;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        border-radius: 1000px
+    }
+    .eachPopBusinsReview .eachPopBusinsReviewPhoto img {
+        width: 100%
+    }
+    .eachPopBusinsReview .eachPopBusinRevewText {
+        display: block;
+        margin-left: 50px;
+        font-size: 14px;
+        height: 40px;
+        overflow: hidden
+    }
+    .homeCategoriesList {
+        height: auto
+    }
+    .homeCategoriesList li {
+        width: 11.111%;
+        -moz-transition: width .3s ease;
+        -o-transition: width .3s ease;
+        -webkit-transition: width .3s ease;
+        transition: width .3s ease;
+        margin-bottom: 0
+    }
+    .eachHomeCategory {
+        max-width: 96px;
+        font-size: 14px
+    }
+    .eachHomeCategory .eachCategoryIcon {
+        width: 75px;
+        height: 75px
+    }
+    .eachHomeCategory .eachCategoryIcon::before {
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -moz-transition: -moz-transform .3s ease;
+        -o-transition: -o-transform .3s ease;
+        -webkit-transition: -webkit-transform .3s ease;
+        transition: transform .3s ease;
+        left: 0;
+        top: 0
+    }
+    .homeFBBlock .wrapper {
+        position: relative
+    }
+    .homeFBList {
+        display: inline-block
+    }
+    .homeFBList li {
+        margin-left: 10px;
+        margin-right: 10px
+    }
+    .homeFBListBlock {
+        height: 230px;
+        padding-left: 0px;
+        padding-right: 0px
+    }
+    .fbListRightArrow,
+    .fbListLeftArrow {
+        position: absolute;
+        right: 0;
+        top: 50px;
+        background-color: white;
+        width: 55px;
+        height: 252px;
+        opacity: 0.7;
+        cursor: pointer;
+        display: block
+    }
+    .fbListRightArrow::after,
+    .fbListLeftArrow::after {
+        content: "";
+        position: absolute;
+        left: 25%;
+        top: 25%;
+        width: 23px;
+        height: 60px;
+        display: block
+    }
+    .fbListRightArrow:hover,
+    .fbListLeftArrow:hover {
+        opacity: 1
+    }
+    .popularThisWeekBlock {
+        background-color: transparent;
+        margin: 0;
+        padding: 0
+    }
+    .otherPopular {
+        margin-right: -15px
+    }
+    .otherPopular li {
+        width: 25%;
+        float: left;
+        padding-right: 15px;
+        overflow: hidden;
+        border-bottom: none;
+        height: 420px;
+        padding-bottom: 0;
+        clear: none
+    }
+    .eachOP .eachOPImage {
+        width: 100%
+    }
+    .eachOPTitle {
+        font-size: 15px
+    }
+    .eachOPTitleBlock {
+        margin-left: 0;
+        padding: 10px
+    }
+    .eachOPTitleBlock .opContact {
+        display: block;
+        padding-left: 20px;
+        position: relative;
+        width: auto;
+        height: 20px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        background-image: none;
+        line-height: 1.5;
+        top: 0;
+        margin-top: 20px;
+        cursor: default
+    }
+    .eachOPTitleBlock .opContact::after {
+        display: none
+    }
+    .eachOPTitleBlock .opContact::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 14px;
+        height: 14px;
+        opacity: 0.6
+    }
+    .opAddress {
+        margin-left: 0;
+        position: relative;
+        padding-left: 20px;
+        padding-top: 10px;
+        font-size: 12px;
+        height: 46px;
+        overflow: hidden
+    }
+    .opAddress::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 12px;
+        width: 14px;
+        height: 14px;
+        opacity: 0.6
+    }
+    .opAddress strong {
+        display: block
+    }
+    .opFavLike {
+        display: block;
+        margin-top: 10px
+    }
+    .opFav {
+        display: inline-block
+    }
+    .opFavClick {
+        display: block;
+        position: relative;
+        padding-left: 20px;
+        cursor: pointer
+    }
+    .opFavClick::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        opacity: 0.6;
+        position: absolute;
+        left: 0;
+        top: 4px;
+        display: block
+    }
+    .opFavClick:hover {
+        color: black
+    }
+    .opFavClick:hover::before {
+        opacity: 1
+    }
+    .opFavClick.activeFavIcon {
+        color: black
+    }
+    .opFavClick.activeFavIcon::before {
+        opacity: 1
+    }
+    .opFavLabel {
+        display: block;
+        position: relative;
+        width: 120px;
+        cursor: pointer
+    }
+    .opFavLabel .opFavText {
+        padding-left: 20px;
+        position: relative
+    }
+    .opFavLabel .opFavText::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        opacity: 0.6;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        display: block
+    }
+    .opFavLabel .opFavInput {
+        opacity: 0;
+        visibility: hidden;
+        width: 2px;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        top: 0
+    }
+    .opFavLabel .opFavInput:checked+.opFavText::before {
+        opacity: 1
+    }
+    .opFavLabel:hover .opFavText::before {
+        opacity: 0.8
+    }
+    .opLike {
+        display: inline-block;
+        float: right;
+        padding-left: 20px;
+        position: relative
+    }
+    .opLike::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 14px;
+        height: 14px;
+        opacity: 0.6
+    }
+    .opViewDetails {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+        display: block
+    }
+    .opViewDetails .opViewDetailsLink {
+        display: inline-block;
+        padding: 12px 0;
+        text-align: center;
+        width: 150px;
+        text-decoration: none;
+        color: #333;
+        border: 1px solid #636363;
+        border-radius: 3px
+    }
+    .opViewDetails .opViewDetailsLink:hover {
+        border-color: #acacac;
+        color: #888
+    }
+    .popularLeftBlock {
+        width: 746px;
+        float: left
+    }
+    .popularRightBlock {
+        float: right;
+        width: 230px;
+        display: block;
+        margin-top: 10px;
+        -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        transform: translateX(0%)
+    }
+    .recentViewsBlock {
+        background-color: white;
+        padding: 20px
+    }
+    .recentViewsBlock .thirdHeading {
+        margin-bottom: 15px
+    }
+    .recentReviewsList li {
+        margin-bottom: 20px
+    }
+    .recentReviewsList li:last-child {
+        margin-bottom: 0
+    }
+    .eachRR {
+        display: block
+    }
+    .eachRR .eachRRPhotoRat {
+        display: block;
+        height: 60px
+    }
+    .eachRR .eachRRPhoto {
+        display: block;
+        width: 60px;
+        height: 60px;
+        float: left;
+        overflow: hidden;
+        border-radius: 1000px;
+        margin-right: 10px
+    }
+    .eachRR .titleRating {
+        display: block;
+        margin-left: 60px;
+        vertical-align: top
+    }
+    .eachRR .titleRating .rating {
+        margin-top: 4px
+    }
+    .eachRR .titleRating .reviewerName {
+        font-size: 14px
+    }
+    .eachRR .titleRating .ratingTime {
+        display: inline-block;
+        font-size: 13px;
+        color: #666
+    }
+    .eachRR .eachRRTitle {
+        display: block;
+        font-size: 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        clear: both;
+        margin-top: 20px
+    }
+    .eachRR .eachRRTitleInfo {
+        font-size: 13px;
+        display: block;
+        line-height: 1.4
+    }
+    .haveBusiness {
+        margin-bottom: 15px;
+        background-color: white;
+        height: 160px;
+        position: relative
+    }
+    .haveBusiness .haveBusinessAd {
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 100% auto;
+        padding: 20px 10px 50px 10px;
+        height: 160px
+    }
+    .haveBusiness .haveBusinessAd .addBusinessBtn {
+        background-color: #ffcf05;
+        border: 2px solid #ffcf05;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        cursor: pointer;
+        color: #333;
+        text-decoration: none;
+        font-size: 20px;
+        display: inline-block;
+        -webkit-transition: background-color 0.3s ease;
+        -o-transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease;
+        border-radius: 2px;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 190px;
+        margin-top: 15px;
+        font-size: 15px;
+        font-weight: 600
+    }
+    .haveBusiness .haveBusinessAd .addBusinessBtn:hover {
+        background-color: #fff10a;
+        text-decoration: none;
+        border-color: #fff10a;
+        -webkit-transition: background-color 0.3s ease;
+        -o-transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease
+    }
+    .haveBusiness .havebusinessTitle {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center
+    }
+    .haveBusiness .haveBusinessInfo {
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        padding-top: 5px
+    }
+    .haveBusiness {
+        height: 119px
+    }
+    .haveBusiness .haveBusinessAd {
+        height: 119px;
+        font-size: 14px;
+        font-weight: 600
+    }
+    .mobileAppsDownload {
+        background-image: url(https://cdn.yellowpages.in/images/moibleAppBg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: block;
+        float: left;
+        color: white
+    }
+    .appsDownloadPhoneImage {
+        width: 410px;
+        height: 332px;
+        float: left;
+        margin: 30px 0 30px 10px
+    }
+    .appsDownloadContent {
+        margin-left: 64px;
+        margin-top: 120px;
+        width: 460px;
+        float: left
+    }
+    .appsDownloadContent .appsDownloadHeading {
+        font-size: 32px;
+        display: block;
+        font-weight: 600
+    }
+    .appsDownloadContent .appsDownloadHeading strong {
+        color: #ffcf05
+    }
+    .appsDownloadContent p {
+        font-size: 22px;
+        font-weight: 300
+    }
+    .appsDownloadBtns {
+        display: block;
+        margin-top: 5px
+    }
+    .appsDownloadBtns a {
+        margin-right: 15px;
+        width: 150px;
+        height: 45px;
+        font-size: 0;
+        display: inline-block
+    }
+}
+@media only screen and (min-width: 1168px) {
+    .eachPopularLeft .eachPopularImage {
+        width: 192px;
+        height: 120px;
+        margin-right: 10px
+    }
+    .eachPopularLeft .eachPopularTitleBlock {
+        margin-left: 210px
+    }
+    .popularLeftBlock {
+        width: 820px
+    }
+    .popularRightBlock {
+        width: 300px
+    }
+    .appsDownloadPhoneImage {
+        margin: 30px 0 30px 110px
+    }
+    .haveBusiness {
+        height: 137px
+    }
+    .haveBusiness .haveBusinessAd {
+        height: 137px;
+        font-size: 16px;
+        font-weight: 400
+    }
+    .footerSocialLinks .footFacebook,
+    .footerSocialLinks .footTwitter,
+    .footerSocialLinks .footGooglePlus,
+    .footerSocialLinks .footYouTube {
+        width: 20px;
+        height: 20px;
+        border: none;
+        border-radius: 0
+    }
+    .footerSocialLinks .footFacebook::before,
+    .footerSocialLinks .footTwitter::before,
+    .footerSocialLinks .footGooglePlus::before,
+    .footerSocialLinks .footYouTube::before {
+        left: 0;
+        top: 0
+    }
+    .footerSocialLinks .footFacebook:hover,
+    .footerSocialLinks .footTwitter:hover,
+    .footerSocialLinks .footGooglePlus:hover,
+    .footerSocialLinks .footYouTube:hover {
+        background-color: transparent;
+        opacity: 0.6
+    }
+    .footerSocialMobile {
+        width: 30%;
+        margin-top: 0
+    }
+    .mobileNavBlocks {
+        width: 70%
+    }
+}
+
+form {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: cyan;
+  display: inline-block;
+  width: 100%;
+  max-width: 340px;
+  border-radius: 3px;
+}
+
+input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+button {
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: lightgrey;
+  border: 1px solid grey;
+  box-shadow: 2px 2px teal;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: yellow;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+footer {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid lightgrey;
+}
+
+footer > a {
+  color: #BBBBBB;
+}
+
+.nicejob {
+  text-decoration: line-through;
+}
+.slide-down-enter,
+.slide-down-leave
+{
+    -webkit-transition:200ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition:200ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition:200ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition:200ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition:200ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    display:block;
+    overflow:hidden;
+    position:relative;
+}
+
+.items-table .row {
+  border-bottom:1px solid #ddd;
+  line-height:3em;
+}
+.items-table .row:last-child {
+  border-bottom:none;
+  line-height:3em;
+}
+
+.slide-down-enter.slide-down-enter-active,
+.slide-down-leave {
+    opacity:1;
+    height:46px;
+}
+
+.slide-down-leave.slide-down-leave-active,
+.slide-down-enter {
+    opacity:0;
+    height:0px;
+}
+
+
+.invoice-number-container * {
+  font-weight:bold;
+}
+
+.items-table .row:nth-child(even) {
+  background:#f9f9f9;
+}
+.items-table input {
+  line-height:1.5em;
+}
+.actions {
+  padding-top:1em;
+}
+input:focus {
+  outline: 0;
+}
+
+.heading {
+  background-color:#357EBD;
+  color:#FFF;
+  margin-bottom:1em;
+  text-align:center;
+  line-height:2.5em;
+}
+.branding {
+  padding-bottom:2em;
+  border-bottom:1px solid #ddd;
+}
+.logo-container {
+  text-align:right;
+}
+.infos .right {
+  text-align:right;
+}
+.infos .right input {
+  text-align:right;
+}
+.infos .input-container {
+  padding:3px 0;
+}
+
+.header.row {
+  font-weight:bold;
+  border-bottom:1px solid #ddd;
+  border-top:1px solid #ddd;
+}
+
+input, textarea{
+  border: 1px solid #FFF;
+}
+
+.container input:hover, .container textarea:hover,
+.table-striped > tbody > tr:nth-child(2n+1) > td input:hover,
+.container input:focus, .container textarea:focus,
+.table-striped > tbody > tr:nth-child(2n+1) > td input:focus{
+  border: 1px solid #CCC;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td input{
+    background-color: #F9F9F9;
+    border: 1px solid #F9F9F9;
+}
+
+
+
+@media print {
+    .noPrint {
+        display:none;
+    }
+}
+
+.infos input{
+  width: 300px;
+}
+
+.align-right input{
+  text-align:right;
+  width: 300px;
+}
+
+#imgInp{
+  display: none;
+}
+
+.copy {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  width: 100%;
+  margin: 40px 0 20px 0;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #404040;
+  cursor: default;
+  line-height: 1.4em;
+}
+
+.copy .love {
+  display: inline-block;
+  position: relative;
+  color: #ce0c15;
+}

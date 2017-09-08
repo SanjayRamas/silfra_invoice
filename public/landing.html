@@ -1,0 +1,30 @@
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="home-banner container" style="margin-top:-20px;width:1365px;">
+               <div class="wrapper">
+                  <div class="searchBlock">
+                     
+                     <div class="searchInputBlock">
+                        <div class="homeSearchBlock" id="homeSearchBlock">
+                           
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+
+  <script>
+$(document).ready(function()
+{
+  $('.eachHomeCategory').click(function()
+  {
+      $('#main_search').empty();
+      $('#main_search').val($(this).data('label'));
+      $('#main_search').focus();
+      //$('.fa-search').click();
+      location.href="#/home";
+  });
+});
+</script>

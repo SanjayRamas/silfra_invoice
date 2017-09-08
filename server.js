@@ -1,9 +1,20 @@
-// server.js
-// where your node app starts
+"use strict";
+var mongoose = require('mongoose');
+var passport = require('passport');
+require('./models/Records');
+require('./models/Comments');
+require('./models/User');
+require('./config/passport');
+mongoose.connect('mongodb://silfrainvoice:invoice@ds127864.mlab.com:27864/silfrainvoice');
+
+var bodyParser = require('body-parser');
 
 // init project
 var express = require('express');
 var app = express();
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
 
 // we've started you off with Express, 
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
@@ -11,7 +22,9 @@ var app = express();
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
-// http://expressjs.com/en/starter/basic-routing.html
+// Authentication
+app.use(passport.initialize());
+
 app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
@@ -33,7 +46,11 @@ var invoices = [
   "Wash the dishes"
 ];
 
+var routes = require('./routes/index');
+app.use('/',routes);  
+
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
+ 
