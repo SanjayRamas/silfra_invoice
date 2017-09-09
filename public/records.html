@@ -4,7 +4,7 @@
 
     <div>
       <h1>
-        {{record.invoice.invoice_number}}
+        INVOICE: #{{record.invoice.invoice_number}}
       </h1>
     </div>
   </div>
@@ -42,70 +42,34 @@
         <div class="col-md-5">
           <img src="{{record.invoice.logo_url}}" style="width:200px;height:120px;">
         </div>
-      
+      </div>
       <div ng-show="isSet(2)" style="margin-top:10px">
         
-        
-      <ul id="ulReviews" class="recentReviewsList">
-        <div ng-repeat="comment in record.comments | orderBy:'-upVotes' | orderBy:'-time'">
-         <li>
-            <div class="eachRR">
-               <div class="eachRRPhotoRat">
-                  <div class="eachRRPhoto"><img src="https://cdn.yellowpages.in/assets/u/nophoto.jpg" alt=""></div>
-                  <div class="titleRating">
-                     <a class="reviewerName">{{comment.author}}</a>
-                     <div class="reviewRating">
-                        <i class="fa fa-star" ng-repeat="n in range(1,comment.score)" style="color:#ffe100;font-size: 20px;"></i>
-                        <i class="fa fa-star-o" ng-repeat="n in range(1,5-comment.score)" style="color:#ffe100;font-size: 20px;"></i>
-                    </div>
-                    <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(comment)"></span>{{comment.upvotes}}
-                  </div>
-               </div>
-<!--                <a  class="eachRRTitle">White House Apparels Pvt Ltd</a> -->
-               <p class="eachRRTitleInfo">{{comment.body}}</p>
-            </div>
-         </li>
+     <div class="col-md-7">
+       <div>          
+         <h3>
+         Name:</h3> {{record.invoice.company_info.name_c}}
+        </div><br>
+           <div> 
+          <h3>
+             Weblink:</h3> {{record.invoice.company_info.web_link_c}}
+          </div><br>
+           <div> 
+             <h3>
+               Address 1:</h3>{{record.invoice.company_info.address1_c}}
+          </div><br>
+          <div>
+          <h3>
+            Address 2:</h3>{{record.invoice.company_info.address2_c}}
+            </div><br>
+            <div>
+          <h3>
+            Postal:</h3>{{record.invoice.company_info.postal_c}}
+          </div>
+          </div>
+         <div class="col-md-5">
+          <img src="{{record.invoice.logo_url}}" style="width:200px;height:120px;">
         </div>
-        <br>
-      </ul>
-<!--         <div ng-repeat="comment in record.comments | orderBy:'-upVotes'">
-          <span class="glyphicon glyphicon-thumbs-up"
-                ng-click="incrementUpvotes(comment)"></span>
-          {{comment.upvotes}} - by {{comment.author}}
-          <span style="font-size:20px; margin-left: 10px;">
-            {{comment.body}}
-          </span>
-          <i class="fa fa-star" ng-repeat="n in range(1,comment.score)" style="color:#ffe100;font-size: 20px;"></i>
-          <i class="fa fa-star-o" ng-repeat="n in range(1,5-comment.score)" style="color:#ffe100;font-size: 20px;"></i>
-        </div> -->
-        
-        
-
-        <form ng-submit="addComment()"
-              ng-show="isLoggedIn()"
-                style= "margin-top: 30px;">
-            <h3>Add a new review comment:</h3>
-
-            <div class="form-group">
-              <input type="text"
-                     class="input-lg form-control"
-                     placeholder="Comment"
-                     ng-model="body" style="border-radius: 5px;">
-            </div>
-          
-            <div class="form-group">
-              <select class="input-lg form-control" ng-model="score">
-                <option value="">Rate</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-            </div>
-          
-            <button type="submit" class="btn-lg btn btn-primary">Submit</button>
-        </form>
       </div>
     </div>
 
