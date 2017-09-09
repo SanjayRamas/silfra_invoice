@@ -1,4 +1,4 @@
-<div class="col-md-4 col-md-offset-4" style="background-color: white;padding-bottom:15px;margin-top: 5%;">  
+<div class="col-md-4 col-md-offset-4" style="background-color: white; padding-bottom:25px;margin-top: 2%;">  
   <div class="page-header">
 
 
@@ -21,27 +21,28 @@
        <div>          
          <h3>
          Name:</h3> {{record.invoice.customer_info.name}}
-        </div>
+        </div><br>
            <div> 
           <h3>
              Weblink:</h3> {{record.invoice.customer_info.web_link}}
-          </div>
+          </div><br>
            <div> 
              <h3>
                Address 1:</h3>{{record.invoice.customer_info.address1}}
-          </div>
+          </div><br>
           <div>
           <h3>
             Address 2:</h3>{{record.invoice.customer_info.address2}}
-            </div>
+            </div><br>
             <div>
           <h3>
             Postal:</h3>{{record.invoice.customer_info.postal}}
           </div>
+          </div>
         <div class="col-md-5">
           <img src="{{record.invoice.logo_url}}" style="width:200px;height:120px;">
         </div>
-      </div>
+      
       <div ng-show="isSet(2)" style="margin-top:10px">
         
         
