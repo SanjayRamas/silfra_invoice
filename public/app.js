@@ -427,10 +427,10 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
     console.log($scope.allComments);
     
     $scope.addRecord = function() {
-      console.log("addRecord");
+      //console.log("addRecord");
       
       if(!$scope.invoice_number || $scope.invoice_number === '') return;
-      console.log("addRecord2");
+      console.log("Inserted");
       
       records.create({
         invoice : {
@@ -445,11 +445,11 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
             postal:$scope.postal
           },
           company_info: {
-            name: $scope.name,
-            web_link: $scope.web_link,
-            address1: $scope.address1,
-            address2: $scope.address2,
-            postal:$scope.postal
+            name_c: $scope.name_c,
+            web_link_c: $scope.web_link_c,
+            address1_c: $scope.address1_c,
+            address2_c: $scope.address2_c,
+            postal_c:$scope.postal_c
           },
           items: [
             {
@@ -463,19 +463,19 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
       $scope.tax="";
       $scope.invoice_number="";
       $scope.logo_url="";
-      $scope.customer_info.name="";
-      $scope.customer_info.web_link="";  
-      $scope.customer_info.address1="";
-      $scope.customer_info.address2="";  
-      $scope.customer_info.postal=""; 
-      $scope.company_info.name="";
-      $scope.company_info.web_link="";  
-      $scope.company_info.address1="";
-      $scope.company_info.address2="";  
-      $scope.company_info.postal=""; 
-      $scope.items.qty="";
-      $scope.items.description="";
-      $scope.items.cost="";
+      $scope.name="";
+      $scope.web_link="";  
+      $scope.address1="";
+      $scope.address2="";  
+      $scope.postal=""; 
+      $scope.name_c="";
+      $scope.web_link_c="";  
+      $scope.address1_c="";
+      $scope.address2_c="";  
+      $scope.postal_c=""; 
+      $scope.qty="";
+      $scope.description="";
+      $scope.cost="";
       
       
       

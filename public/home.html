@@ -3,30 +3,39 @@
               
            </div>
             <div class="col-md-7 " style="margin-top: 10px;">      
-<!--              <div class="page-header"> -->
-<!--                <h3 class="thirdHeading">
-                        Business Name
-                        </h3> -->
-              <!--input type="text" ng-model="nameFilter" placeholder="Search..." style="width:100%;" /-->
-                <!--table border="1px" style="width:100%;colspan:4;">
+             <div class="page-header"> 
+              <h3 class="thirdHeading">
+                        INVOICES
+                        </h3> 
+             
+                <table border="1px" style="width:150%;colspan:4;background-color:white">
                   <thead>
                     <tr>
                       <td><h4 style="text-align:center;">
-                        Business Name
+                        Invoice number
                         </h4></td>
-                      <td><h4 style="text-align:center;">Address</h4></td>
-                      <td><h4 style="text-align:center;">Email</h4></td>
-                      <td><h4 style="text-align:center;">Phone</h4></td>
-                      <td><h4 style="text-align:center;">Category</h4></td>
+                      <td><h4 style="text-align:left;">Customer Name</h4></td>
+                      <td><h4 style="text-align:left;">Customer Weblink</h4></td>
+                      <td><h4 style="text-align:left;">Customer Address1</h4></td>
+                      <td><h4 style="text-align:left;">Customer Address2</h4></td>
+                      <td><h4 style="text-align:left;">Customer Postal</h4></td>
+                      
+                      <td><h4 style="text-align:left;">Company Name</h4></td>
+                      <td><h4 style="text-align:left;">Company Weblink</h4></td>
+                      <td><h4 style="text-align:left;">Company Address1</h4></td>
+                      <td><h4 style="text-align:left;">Company Address2</h4></td>
+                      <td><h4 style="text-align:left;">Company Postal</h4></td>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr ng-repeat="record in records | orderBy:'-upvotes' | filter: nameFilter">
-                      <td><a href="#/records/{{record._id}}">{{record.bizname}}</a></td><td>{{record.address}}</td><td>{{record.email}}</td><td>{{record.phone}}</td><td>{{record.category}}</td>
+                    <tr ng-repeat="record in records">
+                      <td><a href="#/records/{{record._id}}">{{record.invoice.invoice_number}}</a></td><td>{{record.invoice.customer_info.name}}</td><td>{{record.invoice.customer_info.web_link}}</td><td>{{record.invoice.customer_info.address1}}</td><td>{{record.invoice.customer_info.address2}}</td>
+                      <td>{{record.invoice.customer_info.postal}}</td> <td>{{record.invoice.company_info.name_c}}</td> <td>{{record.invoice.company_info.web_link_c}}</td> <td>{{record.invoice.company_info.address1_c}}</td> <td>{{record.invoice.company_info.address2_c}}</td> 
+                      <td>{{record.invoice.company_info.postal_c}}</td>
                     </tr>
                   </tbody>
-               </table-->
-         <div ng-repeat="item in invoice.items | orderBy:'-upvotes' | filter : { invoice.invoice_number : '!!' } | filter: nameFilter" style="background-color:#FFFFFF;margin-bottom:15px;">
+               </table>
+        <!-- <div ng-repeat="record in records | filter : { record.invoice_number : '!!' } | filter: nameFilter" style="background-color:#FFFFFF;margin-bottom:15px;">
             <div class="eachBiz img-thumbnail" style="border: 0px solid #ddd;float:left; width:100%; background-color:#FDFDFD; padding:10px;margin-bottom:15px;border-radius: 0px;">
              <div class="col-md-3" style="padding:0px;">
               <img class="img-thumbnail" src="{{record.link}}" style="width:200px;height: 120px;">
@@ -34,22 +43,22 @@
            <div class="col-md-9">
               <div>
                  <h4 style="margin-top: 0px;">
-                  <a href="#/records/{{record._id}}">{{record.bizname}}</a>   
+                  <a href="#/records/{{record._id}}">{{record.invoice_number}}</a>   
                </h4>
                <span class="glyphicon glyphicon-thumbs-up"
-               ng-click="incrementUpvote(record)"></span> {{record.upvotes}}
+               ng-click="incrementUpvote(record)"></span> {{record.customer_info}}
             </div>
-            <div class="col-md-5 col-md-offset-7" style="padding-right:0px;text-align:right;">
+           <!-- <div class="col-md-5 col-md-offset-7" style="padding-right:0px;text-align:right;">
               {{record.category}}
            </div>
            <div class="col-md-5 col-md-offset-7" style="padding-right:0px;text-align:right;">
               {{record.address}}
-           </div>
+           </div>-->
         </div>
 
      </div>
   </div>
-<!-- </div> -->
+<!-- </div> 
 </div>
 
-</div>
+</div-->

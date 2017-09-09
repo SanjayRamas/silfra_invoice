@@ -13,11 +13,11 @@ var RecordSchema = new mongoose.Schema({
             postal: String
           },
           company_info: {
-            name: String,
-            web_link: String,
-            address1: String,
-            address2: String,
-            postal: String
+            name_c: String,
+            web_link_c: String,
+            address1_c: String,
+            address2_c: String,
+            postal_c: String
           },
           items: [
             {
