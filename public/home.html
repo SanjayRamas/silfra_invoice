@@ -8,30 +8,21 @@
                         INVOICES
                         </h3> 
              
-                <table border="1px" style="width:150%;colspan:4;background-color:white">
+                <table border="1px" style="width:60%;colspan:4;border-color:white">
                   <thead>
                     <tr>
-                      <td><h4 style="text-align:center;">
+                      <td><h4 style="text-align:left;">
                         Invoice number
                         </h4></td>
                       <td><h4 style="text-align:left;">Customer Name</h4></td>
-                      <td><h4 style="text-align:left;">Customer Weblink</h4></td>
-                      <td><h4 style="text-align:left;">Customer Address1</h4></td>
-                      <td><h4 style="text-align:left;">Customer Address2</h4></td>
-                      <td><h4 style="text-align:left;">Customer Postal</h4></td>
                       
                       <td><h4 style="text-align:left;">Company Name</h4></td>
-                      <td><h4 style="text-align:left;">Company Weblink</h4></td>
-                      <td><h4 style="text-align:left;">Company Address1</h4></td>
-                      <td><h4 style="text-align:left;">Company Address2</h4></td>
-                      <td><h4 style="text-align:left;">Company Postal</h4></td>
+                      
                     </tr>
                   </thead>
                   <tbody>
                     <tr ng-repeat="record in records">
-                      <td><a href="#/records/{{record._id}}">{{record.invoice.invoice_number}}</a></td><td>{{record.invoice.customer_info.name}}</td><td>{{record.invoice.customer_info.web_link}}</td><td>{{record.invoice.customer_info.address1}}</td><td>{{record.invoice.customer_info.address2}}</td>
-                      <td>{{record.invoice.customer_info.postal}}</td> <td>{{record.invoice.company_info.name_c}}</td> <td>{{record.invoice.company_info.web_link_c}}</td> <td>{{record.invoice.company_info.address1_c}}</td> <td>{{record.invoice.company_info.address2_c}}</td> 
-                      <td>{{record.invoice.company_info.postal_c}}</td>
+                      <td><a href="#/records/{{record._id}}">{{record.invoice.invoice_number}}</a></td><td>{{record.invoice.customer_info.name}}</td><td>{{record.invoice.company_info.name_c}}</td> 
                     </tr>
                   </tbody>
                </table>
