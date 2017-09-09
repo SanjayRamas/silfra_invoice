@@ -434,7 +434,6 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
       
       records.create({
         invoice : {
-        tax: $scope.tax,
         invoice_number: $scope.invoice_number,
         logo_url: $scope.logo_url,
           customer_info: {
@@ -454,8 +453,12 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
           items: [
             {
               qty: $scope.qty, 
+              tax: $scope.tax,
               description: $scope.description, 
-              cost: $scope.cost
+              cost: $scope.cost,
+              total: $scope.total,
+              subtotal: $scope.subtotal,
+              grandtotal: $scope.grandtotal
             }
           ] }
           
@@ -476,6 +479,10 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
       $scope.qty="";
       $scope.description="";
       $scope.cost="";
+      $scope.total="";
+      $scope.subtotal="";
+      $scope.grandtotal="";
+      
       
       
       

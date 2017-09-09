@@ -71,7 +71,48 @@
           <img src="{{record.invoice.logo_url}}" style="width:200px;height:120px;">
         </div>
       </div>
+      
+      <div ng-show="isSet(3)" style="margin-top:10px">
+         <div ng-repeat="item in invoice.items">
+     <div class="col-md-7">
+       <div>          
+         <h3>
+         Quantity:</h3> {{record.item.qty}}
+        </div><br>
+           <div> 
+          <h3>
+             Description:</h3> {{record.item.description}}
+          </div><br>
+           <div> 
+             <h3>
+               Cost:</h3>{{record.item.cost}}
+          </div>
+       <br>
+           <div> 
+             <h3>
+               Tax(%):</h3>{{record.item.tax}}
+          </div>
+       <div> 
+             <h3>
+               Total:</h3>{{record.item.total}}
+          </div>
+        <div> 
+             <h3>
+               SubTotal:</h3>{{record.item.subtotal}}
+          </div>
+        <div> 
+             <h3>
+               Grand Total:</h3>{{record.item.grandtotal}}
+          </div>
+       </div>
+          <div class="col-md-5">
+          <img src="{{record.invoice.logo_url}}" style="width:200px;height:120px;">
+        </div>
+      
+      
+      
     </div>
+      </div>
 
 
 
