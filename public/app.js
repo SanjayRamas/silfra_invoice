@@ -92,7 +92,7 @@ app.constant('DEFAULT_INVOICE', {
     postal: ''
   },
   items:[
-    { qty: 0, description: '', cost: 0.0 }
+    { qty: 0, description: '', cost: 0.0, tax: 0.0, total: 0.0, subtotal: 0.0, grandtotal: 0.0 }
   ]
 })
 
@@ -189,7 +189,8 @@ app.factory('records', ['$http','auth', function($http, auth) {
   })};
   
   o.create = function (record) {
-    //console.log("create record");
+    console.log(record);
+    
     return $http.post('/records', record, {
       headers: {Authorization: 'Bearer '+auth.getToken()}
     }).success(function(data){
@@ -224,7 +225,7 @@ app.factory('records', ['$http','auth', function($http, auth) {
               o.allComments.push(entry);
             });
             //o.allComments.push(res.data.comments);
-            console.log(o.allComments);
+            //console.log(o.allComments);
             return res.data;
     });
   }
@@ -353,22 +354,45 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
 
   // Calculates the sub total of the invoice
   $scope.invoiceSubTotal = function() {
+    var subtotal = 0.00;
+    angular.forEach($scope.invoice.items, function(item, key){
+      subtotal += (item.qty * item.cost);
+      item.subtotal = subtotal;
+    });
+    return subtotal;
+  };
+    
+     // Calculates the sub total of the invoice
+  $scope.Total = function() {
     var total = 0.00;
     angular.forEach($scope.invoice.items, function(item, key){
-      total += (item.qty * item.cost);
+      total = (item.qty * item.cost);
+      item.total = total;
     });
     return total;
   };
 
   // Calculates the tax of the invoice
   $scope.calculateTax = function() {
-    return (($scope.invoice.tax * $scope.invoiceSubTotal())/100);
+    var tax = 0.00;
+    angular.forEach($scope.invoice.items, function(item, key){
+      tax = (($scope.invoice.tax * $scope.invoiceSubTotal())/100);
+      item.tax = tax;
+    });
+    return tax;
+    
   };
 
   // Calculates the grand total of the invoice
   $scope.calculateGrandTotal = function() {
-    saveInvoice();
-    return $scope.calculateTax() + $scope.invoiceSubTotal();
+    //saveInvoice();
+     var grandtotal = 0.00;
+    angular.forEach($scope.invoice.items, function(item, key){
+     
+      grandtotal = ($scope.calculateTax() + $scope.invoiceSubTotal());
+      item.grandtotal = grandtotal;
+    });
+    return grandtotal;
   };
 
   // Clears the local storage
@@ -383,7 +407,7 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
   // Sets the current invoice to the given one
   var setInvoice = function(invoice) {
     $scope.invoice = invoice;
-    saveInvoice();
+    //saveInvoice();
   };
 
   // Reads a url
@@ -400,7 +424,10 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
 
   // Saves the invoice in local storage
   var saveInvoice = function() {
-    LocalStorage.setInvoice($scope.invoice);
+    
+    //LocalStorage.setInvoice($scope.invoice);
+    //console.log($scope.invoice.items);
+   // $scope.addRecord().records.invoice.items
   };
 
 
@@ -421,10 +448,10 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
     $scope.allComments = records.allComments;
     angular.forEach($scope.records, function(record){
       console.log(record);
-      console.log(records.get(record._id).value);
+      //console.log(records.get(record._id).value);
     });
     $scope.records = records.records;
-    console.log($scope.allComments);
+    console.log($scope.invoice);
     
     $scope.addRecord = function() {
       //console.log("addRecord");
@@ -450,19 +477,11 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
             address2_c: $scope.address2_c,
             postal_c:$scope.postal_c
           },
-          items: [
-            {
-              qty: $scope.qty, 
-              tax: $scope.tax,
-              description: $scope.description, 
-              cost: $scope.cost,
-              total: $scope.total,
-              subtotal: $scope.subtotal,
-              grandtotal: $scope.grandtotal
-            }
-          ] }
+         items: $scope.invoice.items
+           }
           
         });
+      console.log($scope.records);
       $scope.tax="";
       $scope.invoice_number="";
       $scope.logo_url="";
@@ -476,9 +495,9 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
       $scope.address1_c="";
       $scope.address2_c="";  
       $scope.postal_c=""; 
-      $scope.qty="";
+      $scope.qty="0";
       $scope.description="";
-      $scope.cost="";
+      $scope.cost="0.00";
       $scope.total="";
       $scope.subtotal="";
       $scope.grandtotal="";

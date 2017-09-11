@@ -69,7 +69,7 @@
           <input ng-model="item.cost" value="0.00" ng-required ng-validate="number" size="6" placeholder="Cost" />
         </div>
         <div class="col-xs-2 text-right input-container">
-          <input ng-modal="item.total" value="{{item.cost * item.qty | currency: currencySymbol}}" />
+          <input ng-modal="item.total" value="{{Total() | currency: currencySymbol}}" />
         </div>
       </div>
       <div class="row invoice-item">

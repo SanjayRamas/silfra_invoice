@@ -73,36 +73,39 @@
       </div>
       
       <div ng-show="isSet(3)" style="margin-top:10px">
-         <div ng-repeat="item in invoice.items">
+        <!--fgtfghfg
+        {{record.invoice}}-->
+        <div ng-repeat="item in record.invoice.items">
+          {{item}}
      <div class="col-md-7">
        <div>          
          <h3>
-         Quantity:</h3> {{record.item.qty}}
+         Quantity:</h3> {{item.qty}}
         </div><br>
            <div> 
           <h3>
-             Description:</h3> {{record.item.description}}
+             Description:</h3> {{item.description}}
           </div><br>
            <div> 
              <h3>
-               Cost:</h3>{{record.item.cost}}
+               Cost:</h3>{{item.cost}}
           </div>
        <br>
            <div> 
              <h3>
-               Tax(%):</h3>{{record.item.tax}}
+               Tax(%):</h3>{{item.tax}}
           </div>
        <div> 
              <h3>
-               Total:</h3>{{record.item.total}}
+               Total:</h3>{{item.total}}
           </div>
         <div> 
              <h3>
-               SubTotal:</h3>{{record.item.subtotal}}
+               SubTotal:</h3>{{item.subtotal}}
           </div>
         <div> 
              <h3>
-               Grand Total:</h3>{{record.item.grandtotal}}
+               Grand Total:</h3>{{item.grandtotal}}
           </div>
        </div>
           <div class="col-md-5">
@@ -111,7 +114,7 @@
       
       
       
-    </div>
+    <!--</div>-->
       </div>
 
 
