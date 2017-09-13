@@ -112,15 +112,15 @@
         </div>
       
       
-      
+      <div ng-hide="isLoggedIn()">
+  <h3>You need to <a href="/#/login">Log In</a> as admin before you can edit the record.</h3>
+</div>
     <!--</div>-->
       </div>
 
 
 
-<div ng-hide="isLoggedIn()">
-  <h3>You need to <a href="/#/login">Log In</a> or <a href="/#/register">Register</a> before you can comment.</h3>
-</div>
+
 <style>
 .innerHeader{position:relative;z-index:6;background-color:#ffcf05}
 </style>
