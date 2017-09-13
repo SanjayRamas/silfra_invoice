@@ -12,13 +12,13 @@
     <div class="row branding">
       <div class="col-xs-6">
         <div class="invoice-number-container">
-          <label for="invoice-number">Invoice #</label><input type="text" id="invoice-number" ng-model="invoice_number" placeholder="Enter Invoice Number" />
+          <label for="invoice-number">Invoice #</label><input type="text" id="invoice-number" ng-model="invoice.invoice_number" placeholder="Enter Invoice Number" />
         </div>
         <input type="text" id="logo_url" ng-model="logo_url" placeholder="Enter Logo URL" />
       </div>
       <div class="col-xs-6 logo-container">
         
-        <img ng-hide="logoRemoved" id="company_logo" ng-src="{{ logo_url }}" alt="your image" width="32" />
+        <img ng-hide="logoRemoved" id="company_logo" ng-src="{{ invoice.logo_url }}" alt="your image" width="32" />
         <div>
           <div class="noPrint" ng-hide="printMode">
             
@@ -30,21 +30,21 @@
     </div>
     <div class="row infos">
       <div class="col-xs-6">
-         <div class="input-container"><input type="text" ng-model="name" placeholder="Customer Name"/></div>
-        <div class="input-container"><input type="text" ng-model="web_link" placeholder="Web link"/></div>
-        <div class="input-container"><input type="text" ng-model="address1" placeholder="Address 1"/></div>
-        <div class="input-container"><input type="text" ng-model="address2" placeholder="Address 2"/></div>
-        <div class="input-container"><input type="text" ng-model="postal" placeholder="Postal"/></div>
+         <div class="input-container"><input type="text" ng-model="invoice.customer_info.name" placeholder="Customer Name"/></div>
+        <div class="input-container"><input type="text" ng-model="invoice.customer_info.web_link" placeholder="Web link"/></div>
+        <div class="input-container"><input type="text" ng-model="invoice.customer_info.address1" placeholder="Address 1"/></div>
+        <div class="input-container"><input type="text" ng-model="invoice.customer_info.address2" placeholder="Address 2"/></div>
+        <div class="input-container"><input type="text" ng-model="invoice.customer_info.postal" placeholder="Postal"/></div>
         <div class="input-container" data-ng-hide="printMode">
           <select ng-model="currencySymbol" ng-options="currency.symbol as currency.name for currency in availableCurrencies"></select>
         </div>
       </div>
       <div class="col-xs-6 right">
-         <div class="input-container"><input type="text" ng-model="name_c" placeholder="Company Name" style="text-align: left;"/></div>
-        <div class="input-container"><input type="text" ng-model="web_link_c" placeholder="Web link" style="text-align: left;"/></div>
-        <div class="input-container"><input type="text" ng-model="address1_c" placeholder="Address 1" style="text-align: left;"/></div>
-        <div class="input-container"><input type="text" ng-model="address2_c" placeholder="Address 2" style="text-align: left;"/></div>
-        <div class="input-container"><input type="text" ng-model="postal_c" placeholder="Postal" style="text-align: left;"/></div>
+         <div class="input-container"><input type="text" ng-model="invoice.company_info.name" placeholder="Company Name" style="text-align: left;"/></div>
+        <div class="input-container"><input type="text" ng-model="invoice.company_info.web_link" placeholder="Web link" style="text-align: left;"/></div>
+        <div class="input-container"><input type="text" ng-model="invoice.company_info.address1" placeholder="Address 1" style="text-align: left;"/></div>
+        <div class="input-container"><input type="text" ng-model="invoice.company_info.address2" placeholder="Address 2" style="text-align: left;"/></div>
+        <div class="input-container"><input type="text" ng-model="invoice.company_info.postal" placeholder="Postal" style="text-align: left;"/></div>
       </div>
     </div>
     <div class="items-table">
@@ -69,7 +69,7 @@
           <input ng-model="item.cost" value="0.00" ng-required ng-validate="number" size="6" placeholder="Cost" />
         </div>
         <div class="col-xs-2 text-right input-container">
-          <input ng-modal="item.total" value="{{Total() | currency: currencySymbol}}" />
+          {{item.cost * item.qty | currency: currencySymbol}}
         </div>
       </div>
       <div class="row invoice-item">
@@ -79,23 +79,17 @@
       </div>
       <div class="row">
         <div class="col-xs-10 text-right">Sub Total</div>
-        <div class="col-xs-2 text-right">
-          <input ng-modal="item.subtotal" value="{{invoiceSubTotal() | currency: currencySymbol}}" />
-        </div>
+        <div class="col-xs-2 text-right">{{invoiceSubTotal() | currency: currencySymbol}}</div>
       </div>
       <div class="row">
         <div class="col-xs-10 text-right">Tax(%): 
           <div class="col-xs-2 input-container text-right">
             <input ng-model="invoice.tax" ng-validate="number" style="width:43px"></div></div>
-        <div class="col-xs-2 text-right">
-          <input ng-modal="item.tax" value="{{calculateTax() | currency: currencySymbol}}" />
-        </div>
+        <div class="col-xs-2 text-right">{{calculateTax() | currency: currencySymbol}}</div>
       </div>
       <div class="row">
         <div class="col-xs-10 text-right">Grand Total:</div>
-        <div class="col-xs-2 text-right">
-          <input ng-modal="item.grandtotal" value="{{calculateGrandTotal() | currency: currencySymbol}}" />
-        </div>
+        <div class="col-xs-2 text-right">{{calculateGrandTotal() | currency: currencySymbol}}</div>
       </div>
     </div>
     <div class="row noPrint actions">

@@ -67,19 +67,6 @@ router.get('/records/:record', function (req, res, next) {
   })  
 });
 
-router.put('/records/:record/update', function (req, res, next) {   
-  var con = {_id: req.params.id};
-  
-  req.record.update(con, req.body)
-  .then(record => {
-    if(!record) { return res.status(404).end();}
-    return res.status(200).json(record);
-       
-  })
-  .catch(err => next(err));
-  }) ; 
-
-
 router.put('/records/:record/upvote',  function (req, res, next) {
   console.log(req);
   req.record.upvote(function(err, record) {
