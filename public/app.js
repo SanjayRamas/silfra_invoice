@@ -198,6 +198,42 @@ app.factory('records', ['$http','auth', function($http, auth) {
     })
   };
   
+  o.update = function (id) {
+   return $http.get('/records/' + id)
+    .then(function(res){
+            var entry = {};
+            console.log(res.record);
+            entry.invoice_number = res.record.invoice_number;
+            entry.logo_url = res.record.logo_url; 
+            entry.customer_info: {
+            name: String,
+            web_link: String,
+            address1: String,
+            address2: String,
+            postal: String
+          },
+          company_info: {
+            name_c: String,
+            web_link_c: String,
+            address1_c: String,
+            address2_c: String,
+            postal_c: String
+          },
+          items: [
+            {
+              qty: String, 
+              tax: String,
+              description: String, 
+              cost: String,
+              total: String,
+              subtotal: String,
+              grandtotal: String
+    
+            
+            return res.record;
+    });
+  }
+  
   o.upvote = function (record) {
     console.log(auth.getToken());
      return $http.put('/records/' + record._id + '/upvote', {

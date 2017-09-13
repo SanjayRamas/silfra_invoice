@@ -76,21 +76,20 @@
         <!--fgtfghfg
         {{record.invoice}}-->
         <div ng-repeat="item in record.invoice.items">
-          {{item}}
      <div class="col-md-7">
        <div>          
          <h3>
          Quantity:</h3> {{item.qty}}
-        </div><br>
+        </div>
            <div> 
           <h3>
              Description:</h3> {{item.description}}
-          </div><br>
+          </div>
            <div> 
              <h3>
                Cost:</h3>{{item.cost}}
           </div>
-       <br>
+       
            <div> 
              <h3>
                Tax(%):</h3>{{item.tax}}
@@ -106,7 +105,7 @@
         <div> 
              <h3>
                Grand Total:</h3>{{item.grandtotal}}
-          </div>
+          </div><br>
        </div>
           <div class="col-md-5">
           <img src="{{record.invoice.logo_url}}" style="width:200px;height:120px;">
