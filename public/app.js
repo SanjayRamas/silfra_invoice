@@ -203,31 +203,33 @@ app.factory('records', ['$http','auth', function($http, auth) {
     .then(function(res){
             var entry = {};
             console.log(res.record);
-            entry.invoice_number = res.record.invoice_number;
-            entry.logo_url = res.record.logo_url; 
-            entry.customer_info: {
-            name: String,
-            web_link: String,
-            address1: String,
-            address2: String,
-            postal: String
-          },
-          company_info: {
-            name_c: String,
-            web_link_c: String,
-            address1_c: String,
-            address2_c: String,
-            postal_c: String
-          },
-          items: [
-            {
-              qty: String, 
-              tax: String,
-              description: String, 
-              cost: String,
-              total: String,
-              subtotal: String,
-              grandtotal: String
+            entry.invoice_number = res.record.invoice.invoice_number;
+            entry.logo_url = res.record.invoice.logo_url; 
+            entry.customer_info = res.record.invoice.customer_info; 
+            entry.name = res.record.invoice.customer_info.name;
+            entry.web_link = res.record.invoice.customer_info.web_link;
+            entry.address1 = res.record.invoice.customer_info.address1;
+            entry.address2 = res.record.invoice.customer_info.address2;
+            entry.postal = res.record.invoice.customer_info.postal;
+            entry.name_c = res.record.invoice.company_info.name_c;
+            entry.web_link_c = res.resort.invoice.company_info.web_link_c;
+            entry.address1_c = res.record.invoice.company_info.address1_c;
+            entry.address2_c = res.record.invoice.company_info.address2_c;
+            entry.postal_c = res.record.invoice.company_info.postal_c;
+            entry.postal_c = res.record.invoice.company_info.postal_c;
+              entry.postal_c = res.record.invoice.company_info.postal_c;
+              entry.postal_c = res.record.invoice.company_info.postal_c;
+              entry.postal_c = res.record.invoice.company_info.postal_c;
+              entry.postal_c = res.record.invoice.company_info.postal_c;
+              entry.postal_c = res.record.invoice.company_info.postal_c;
+              entry.postal_c = res.record.invoice.company_info.postal_c;
+              entry.qty = res.record.invoice.items.qty;
+              entry.tax = res.record.invoice.items.tax;
+              entry.description = res.record.invoice.items.description; 
+              entry.cost = res.record.invoice.items.cost;
+              entry.total = res.record.invoice.items.total;
+              entry.subtotal = res.record.invoice.items.subtotal;
+              entry.grandtotal = res.record.invoice.items.grandtotal;
     
             
             return res.record;
