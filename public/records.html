@@ -109,12 +109,13 @@
        </div>
           <div class="col-md-5">
           <img src="{{record.invoice.logo_url}}" style="width:200px;height:120px;">
+            <div ng-hide="isLoggedIn()">
+  <h3>You need to <a href="/#/login">Log In</a> as admin before you can edit the record.</h3>
+</div>
         </div>
       
       
-      <div ng-hide="isLoggedIn()">
-  <h3>You need to <a href="/#/login">Log In</a> as admin before you can edit the record.</h3>
-</div>
+      
     <!--</div>-->
       </div>
 
