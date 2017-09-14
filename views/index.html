@@ -15,12 +15,6 @@
     <div class="container" style="width:1170px;margin-left: 6%;">
       <a class="navbar-brand" href="/#/landing"><img src="http://silfratech.com/wp-content/uploads/2016/06/silfra-logo-150.png" alt="Silfra" style="margin-top: -10px;width: 40px;"></a>
       <ul class="nav navbar-nav">
-         
-        
-        <!--li ng-show="isLoggedIn()"><a>{{ currentUser() }}</a></li-->
-
-        
-
         <li >
           <div class="search">
             <input type="text" ng-model="$parent.nameFilter.$" class="form-control" ng-init="Apparels" placeholder="Search..." id="main_search" style="width:200%;margin-top:5px;font-weight:normal;height: 39px;border-radius:3px;" />
@@ -41,9 +35,8 @@
       </ul>  
     </div>
   </nav>
-  <!--<div class="row">-->
+ 
       <ui-view></ui-view>
-  <!--</div>-->
 
 </body>
 </html>
