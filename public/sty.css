@@ -4158,6 +4158,17 @@ footer > a {
   line-height:3em;
 }
 
+.items-tables .row {
+  border-bottom:1px solid #ddd;
+  line-height:3em;
+  line-width:2em;
+}
+.items-tables .row:last-child {
+  border-bottom:none;
+  line-height:3em;
+  line-width:2em;
+}
+
 .slide-down-enter.slide-down-enter-active,
 .slide-down-leave {
     opacity:1;
@@ -4176,9 +4187,15 @@ footer > a {
 }
 
 .items-table .row:nth-child(even) {
-  background:#f9f9f9;
+  background:#ffffff;
 }
 .items-table input {
+  line-height:1.5em;
+}
+.items-tables .row:nth-child(even) {
+  background:#ffffff;
+}
+.items-tables input {
   line-height:1.5em;
 }
 .actions {
