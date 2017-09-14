@@ -558,8 +558,7 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
             address1_c: $scope.address1_c,
             address2_c: $scope.address2_c,
             postal_c:$scope.postal_c
-          },
-         items: $scope.invoice.items
+          }
            }
           
         });
