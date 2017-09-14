@@ -129,45 +129,58 @@
         <div class="col-md-7">
        <div>          
          <h3>
-         Customer Name:</h3> {{record.invoice.customer_info.name}}
+         Customer Name:</h3> 
+         <div click-to-edit type="inputText" ng-model="record.invoice.customer_info.name" ></div>
+         <!--<input type="text" id="invoice-number" ng-model="invoice_number" value="" placeholder="{{record.invoice.customer_info.name}}"/-->
         </div><br>
            <div> 
           <h3>
-            Customer Weblink:</h3> {{record.invoice.customer_info.web_link}}
+            Customer Weblink:</h3>
+             <div click-to-edit type="inputText" ng-model="record.invoice.customer_info.web_link" ></div>
           </div><br>
            <div> 
              <h3>
-              Customer Address 1:</h3>{{record.invoice.customer_info.address1}}
+              Customer Address 1:</h3>
+             <div click-to-edit type="inputText" ng-model="record.invoice.customer_info.address1" ></div>
           </div><br>
           <div>
           <h3>
-           Customer Address 2:</h3>{{record.invoice.customer_info.address2}}
+           Customer Address 2:</h3>
+            <div click-to-edit type="inputText" ng-model="record.invoice.customer_info.address2" ></div>
             </div><br>
             <div>
           <h3>
-           Customer Postal:</h3>{{record.invoice.customer_info.postal}}
+           Customer Postal:</h3>
+              <div click-to-edit type="inputText" ng-model="record.invoice.customer_info.postal" ></div>
           </div><br>
           <div>          
          <h3>
-       Company Name:</h3> {{record.invoice.company_info.name_c}}
+       Company Name:</h3> 
+            <div click-to-edit type="inputText" ng-model="record.invoice.company_info.name_c" ></div>
         </div><br>
            <div> 
           <h3>
-            Company Weblink:</h3> {{record.invoice.company_info.web_link_c}}
+            Company Weblink:</h3>
+             <div click-to-edit type="inputText" ng-model="record.invoice.company_info.web_link_c" ></div>
           </div><br>
            <div> 
              <h3>
-              Company Address 1:</h3>{{record.invoice.company_info.address1_c}}
+              Company Address 1:</h3>
+             <div click-to-edit type="inputText" ng-model="record.invoice.company_info.address1_c" ></div>
           </div><br>
           <div>
           <h3>
-           Company Address 2:</h3>{{record.invoice.company_info.address2_c}}
+           Company Address 2:</h3>
+            <div click-to-edit type="inputText" ng-model="record.invoice.company_info.address2_c" ></div>
             </div><br>
             <div>
           <h3>
-           Company Postal:</h3>{{record.invoice.company_info.postal_c}}
+           Company Postal:</h3>
+              <div click-to-edit type="inputText" ng-model="record.invoice.company_info.postal_c" ></div>
+          </div><br>
+          <div>
+          <button ng-click="updateRecord(record)">Update</button>
           </div>
-         
           </div>
           </div>
            <div class="col-md-5">

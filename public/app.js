@@ -37,16 +37,6 @@ app.config(['$stateProvider', '$urlRouterProvider',
                     }]
                  }
                })
-             .state('records_edit', {
-                 url:'/editrecord/:id',
-                 templateUrl: 'editrecord.html',
-                 controller: 'RecordsCtrl',
-                 resolve: {
-                   record: ['$stateParams', 'records', function($stateParams, record) {
-                      return record.get($stateParams.id);
-                    }]
-                 }
-               })
                .state('login', {
                  url: '/login',
                  templateUrl: '/login.html',
@@ -545,6 +535,60 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
       
     }
     
+    $scope.updateRecord = function(record) {
+      //console.log("addRecord");
+      
+      if(!$scope.invoice_number || $scope.invoice_number === '') return;
+      console.log("Inserted");
+      
+      records.update({
+        invoice : {
+        invoice_number: $scope.invoice_number,
+        logo_url: $scope.logo_url,
+          customer_info: {
+            name: $scope.name,
+            web_link: $scope.web_link,
+            address1: $scope.address1,
+            address2: $scope.address2,
+            postal:$scope.postal
+          },
+          company_info: {
+            name_c: $scope.name_c,
+            web_link_c: $scope.web_link_c,
+            address1_c: $scope.address1_c,
+            address2_c: $scope.address2_c,
+            postal_c:$scope.postal_c
+          },
+         items: $scope.invoice.items
+           }
+          
+        });
+      console.log($scope.records);
+      $scope.tax="";
+      $scope.invoice_number="";
+      $scope.logo_url="";
+      $scope.name="";
+      $scope.web_link="";  
+      $scope.address1="";
+      $scope.address2="";  
+      $scope.postal=""; 
+      $scope.name_c="";
+      $scope.web_link_c="";  
+      $scope.address1_c="";
+      $scope.address2_c="";  
+      $scope.postal_c=""; 
+      $scope.qty="0";
+      $scope.description="";
+      $scope.cost="0.00";
+      $scope.total="";
+      $scope.subtotal="";
+      $scope.grandtotal="";
+      
+      
+      
+      
+    }
+    
      $scope.incrementUpvote = function (record) {
       console.log(record);
       records.upvote(record);
@@ -553,6 +597,71 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
     
 
 }]);
+
+app.directive("clickToEdit", function($timeout) {
+  return {
+    require: "ngModel",
+    scope: {
+      model: "=ngModel",
+      type: "@type"
+    },
+    replace: true,
+    transclude: false,
+    // includes our template
+    template:
+      '<div class="templateRoot">' +
+        '<div class="hover-edit-trigger" title="click to edit">' +
+        '<div class="hover-text-field" ng-show="!editState" ng-click="toggle()">{{model}}<div class="edit-pencil glyphicon glyphicon-pencil"></div></div>' +
+        '<input class="inputText" type="text" ng-model="localModel" ng-enter="save()" ng-show="editState && type == \'inputText\'" />' +
+        "</div>" +
+        '<div class="edit-button-group pull-right" ng-show="editState">' +
+        '<div class="glyphicon glyphicon-ok"  ng-click="save()"></div>' +
+        '<div class="glyphicon glyphicon-remove" ng-click="cancel()"></div>' +
+        "</div>" +
+        "</div>",
+    link: function(scope, element, attrs) {
+      scope.editState = false;
+
+      // make a local ref so we can back out changes, this only happens once and persists
+      scope.localModel = scope.model;
+
+      // apply the changes to the real model
+      scope.save = function() {
+        scope.model = scope.localModel;
+        scope.toggle();
+      };
+
+      // don't apply changes
+      scope.cancel = function() {
+        scope.localModel = scope.model;
+        scope.toggle();
+      };
+
+      /*
+             * toggles the editState of our field
+             */
+      scope.toggle = function() {
+        scope.editState = !scope.editState;
+
+        /*
+                 * a little hackish - find the "type" by class query
+                 *
+                 */
+        var x1 = element[0].querySelector("." + scope.type);
+
+        /*
+                 * could not figure out how to focus on the text field, needed $timout
+                 * http://stackoverflow.com/questions/14833326/how-to-set-focus-on-input-field-in-angularjs
+                 */
+        $timeout(function() {
+          // focus if in edit, blur if not. some IE will leave cursor without the blur
+          scope.editState ? x1.focus() : x1.blur();
+        }, 0);
+      };
+    }
+  };
+});
+
 
 app.controller('RecordsCtrl', [
   
