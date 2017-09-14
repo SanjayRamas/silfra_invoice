@@ -38,8 +38,8 @@ app.config(['$stateProvider', '$urlRouterProvider',
                  }
                })
              .state('records_edit', {
-                 url:'/records/:id',
-                 templateUrl: 'edit.html',
+                 url:'/editrecord/:id',
+                 templateUrl: 'editrecord.html',
                  controller: 'RecordsCtrl',
                  resolve: {
                    record: ['$stateParams', 'records', function($stateParams, record) {

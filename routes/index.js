@@ -67,7 +67,7 @@ router.get('/records/:record', function (req, res, next) {
   })  
 });
 
-router.put('/records/:record/update', function (req, res, next) {   
+router.post('/records/:record', function (req, res, next) {   
   var con = {_id: req.params.id};
   
   req.record.update(con, req.body)
