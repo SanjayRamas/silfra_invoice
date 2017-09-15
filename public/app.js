@@ -1,4 +1,4 @@
-var app = angular.module('invoicing', ['ui.router'])
+var app = angular.module('invoicing', ['ui.router','ngPrint'])
 
 app.config(['$stateProvider', '$urlRouterProvider',
            function (stateProvider, urlRouterProvider) {
