@@ -71,7 +71,7 @@
         <div class="col-xs-1">&nbsp;</div>
         <div class="col-xs-5">Description</div>
         <div class="col-xs-2">Quantity</div>
-        <div class="col-xs-2">Cost {{currencySymbol}}</div>
+        <div class="col-xs-2">Cost {{invoice.currencySymbol}}</div>
         <div class="col-xs-2 text-right">Total</div>
       </div>
       <div class="row invoice-item" ng-animate="'slide-down'"  ng-repeat="item in record.invoice.items track by $index"> <!--repeat here -->
@@ -85,10 +85,10 @@
          {{item.qty}}
         </div>
         <div class="col-xs-2 input-container">
-          {{item.cost}}
+          {{item.cost | currency: currencySymbol}}
         </div>
         <div class="col-xs-2 text-right input-container">
-         {{item.total}}
+         {{item.total | currency: currencySymbol}}
         </div>
       <!--/div-->
       <div class="row invoice-item">
@@ -102,7 +102,7 @@
         
         <div class="col-xs-2 text-right">
           
-          {{item.subtotal}}
+          {{item.subtotal | currency: currencySymbol}}
         
        
       </div>
@@ -114,7 +114,7 @@
         
         <div class="col-xs-2 text-right" >
           
-          {{item.tax}}
+          {{item.tax | currency: currencySymbol}}
         
         </div>
         
@@ -124,7 +124,7 @@
 
         <div class="col-xs-2 text-right">
           
-          {{item.grandtotal}}
+          {{item.grandtotal | currency: currencySymbol}}
         </div>
         
       

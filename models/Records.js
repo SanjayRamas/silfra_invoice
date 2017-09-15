@@ -4,6 +4,7 @@ var RecordSchema = new mongoose.Schema({
   invoice : {
         invoice_number: String,
         logo_url: String,
+        currencySymbol: String,
           customer_info: {
             name: String,
             web_link: String,

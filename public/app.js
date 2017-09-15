@@ -338,7 +338,7 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
     return input;
      };
   // Set defaults
-  $scope.currencySymbol = '$';
+  $scope.currencySymbol = '₹';
   $scope.logoRemoved = false;
   $scope.printMode   = false;
 
@@ -491,6 +491,7 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
         invoice : {
         invoice_number: $scope.invoice_number,
         logo_url: $scope.logo_url,
+        currencySymbol: $scope.currency,
           customer_info: {
             name: $scope.name,
             web_link: $scope.web_link,
@@ -513,6 +514,7 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
       $scope.tax="";
       $scope.invoice_number="";
       $scope.logo_url="";
+      $scope.currency="";
       $scope.name="";
       $scope.web_link="";  
       $scope.address1="";
@@ -596,6 +598,30 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
     
 
 }]);
+
+app.controller('NavCtrl', function ($scope, $location) {
+    $scope.isCollapsed = true;
+    $scope.$on('$routeChangeSuccess', function () {
+        $scope.isCollapsed = true;
+    });
+  
+    $scope.getClass = function (path) {
+    if(path === '/home') {
+        if($location.path() === '/home') {
+            return "active";
+        } else {
+            return "";
+        }
+    }
+ 
+    if ($location.path().substr(0, path.length) === path) {
+        return "active";
+    } else {
+        return "";
+    }
+}
+    
+});
 
 app.directive("clickToEdit", function($timeout) {
   return {
