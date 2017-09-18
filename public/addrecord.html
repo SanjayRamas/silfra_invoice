@@ -1,4 +1,4 @@
-<form class="container col-md-2 col-md-offset-2" ng-submit="addRecord()" id="invoice" style="background-color:#E6E6FA; max-width:850px;margin-top:100px;">
+<form class="container col-md-2 col-md-offset-2" ng-submit="addRecord()" id="invoice" name="my-form" style="background-color:#E6E6FA; max-width:850px;margin-top:100px;">
 
 <div class="row">
       <div class="col-xs-12 heading">
@@ -12,9 +12,10 @@
     <div class="row">
       <div class="col-xs-6">
         <div class="invoice-number-container">
-          <label for="invoice-number">Invoice #</label><input type="text" id="invoice-number" ng-model="invoice_number" placeholder="Enter Invoice Number" ng-required="required"/>
+          <label for="invoice-number">Invoice #</label><input type="text" id="invoice-number" name="invoice-number" ng-model="invoice_number" placeholder="Enter Invoice Number" required/>
+          <span ng-show="my-form.$dirty && my-form.invoice-number.$error.required">This is a required field</span>
         </div>
-        <input type="text" id="logo_url" ng-model="logo_url" placeholder="Enter Logo URL" ng-required="required"/>
+        <input type="text" id="logo_url" name="logo_url" ng-model="logo_url" placeholder="Enter Logo URL" required/>
       </div>
       <div class="col-xs-6 logo-container">
         
@@ -31,21 +32,21 @@
   <hr>
     <div class="row infos">
       <div class="col-xs-6">
-         <div class="input-container"><input type="text" ng-model="name" placeholder="Customer Name" ng-required="required"/></div>
-        <div class="input-container"><input type="text" ng-model="web_link" placeholder="Web link" ng-required="required"/></div>
-        <div class="input-container"><input type="text" ng-model="address1" placeholder="Address 1" ng-required="required"/></div>
-        <div class="input-container"><input type="text" ng-model="address2" placeholder="Address 2" ng-required="required"/></div>
-        <div class="input-container"><input type="text" ng-model="postal" placeholder="Postal" ng-required="required"/></div>
+         <div class="input-container"><input type="text" ng-model="name" name="name" placeholder="Customer Name" required/></div>
+        <div class="input-container"><input type="text" ng-model="web_link" name="web_link" placeholder="Web link" required/></div>
+        <div class="input-container"><input type="text" ng-model="address1" name="address1" placeholder="Address 1" required/></div>
+        <div class="input-container"><input type="text" ng-model="address2" name="address2" placeholder="Address 2" required/></div>
+        <div class="input-container"><input type="text" ng-model="postal" name="postal" placeholder="Postal" required/></div>
         <div class="input-container" data-ng-hide="printMode">
           <select ng-model="currencySymbol" ng-options="currency.symbol as currency.name for currency in availableCurrencies"></select>
         </div>
       </div>
       <div class="col-xs-6 right">
-         <div class="input-container"><input type="text" ng-model="name_c" placeholder="Company Name" style="text-align: left;" ng-required="required"/></div>
-        <div class="input-container"><input type="text" ng-model="web_link_c" placeholder="Web link" style="text-align: left;" ng-required="required"/></div>
-        <div class="input-container"><input type="text" ng-model="address1_c" placeholder="Address 1" style="text-align: left;" ng-required="required"/></div>
-        <div class="input-container"><input type="text" ng-model="address2_c" placeholder="Address 2" style="text-align: left;" ng-required="required"/></div>
-        <div class="input-container"><input type="text" ng-model="postal_c" placeholder="Postal" style="text-align: left;" ng-required="required"/></div>
+         <div class="input-container"><input type="text" ng-model="name_c" name="name_c" placeholder="Company Name" style="text-align: left;" required/></div>
+        <div class="input-container"><input type="text" ng-model="web_link_c" name="web_link_c" placeholder="Web link" style="text-align: left;" required/></div>
+        <div class="input-container"><input type="text" ng-model="address1_c" name="address1_c" placeholder="Address 1" style="text-align: left;" required/></div>
+        <div class="input-container"><input type="text" ng-model="address2_c" name="address2_c" placeholder="Address 2" style="text-align: left;" required/></div>
+        <div class="input-container"><input type="text" ng-model="postal_c" name="postal_c" placeholder="Postal" style="text-align: left;" required/></div>
       </div>
     </div>
     <div class="items-table">
@@ -61,13 +62,13 @@
           <a href ng-hide="printMode" ng-click="removeItem(item)" class="btn btn-danger">[X]</a>
         </div>
         <div class="col-xs-5 input-container">
-          <input ng-model="item.description" placeholder="Description" ng-required="required"/>
+          <input ng-model="item.description" name="description" placeholder="Description" required/>
         </div>
         <div class="col-xs-2 input-container">
-          <input ng-model="item.qty" value="1" size="4" ng-required ng-validate="integer" placeholder="Quantity" />
+          <input ng-model="item.qty" name="qty" value="1" size="4" ng-validate="integer" placeholder="Quantity" required/>
         </div>
         <div class="col-xs-2 input-container">
-          <input ng-model="item.cost" value="0.00" ng-required ng-validate="number" size="6" placeholder="Cost" />
+          <input ng-model="item.cost" name="cost" value="0.00" ng-validate="number" size="6" placeholder="Cost" required/>
         </div>
         <div class="col-xs-2 text-right input-container">
           <input ng-modal="item.total" value="{{Total() | currency: currencySymbol}}" readonly/>
@@ -105,8 +106,7 @@
     <div class="row noPrint actions">
       <a href="#" class="btn btn-primary" ng-show="printMode" ng-click="printInfo()">Print</a>
       <a href="#" class="btn btn-primary" ng-click="clearLocalStorage()">Reset</a>
-      <a href="#" class="btn btn-primary" ng-hide="printMode" ng-click="printMode = true;">Turn On Print Mode</a>
-      <a href="#" class="btn btn-primary" ng-show="printMode" ng-click="printMode = false;">Turn Off Print Mode</a>
-      <button type="submit" class="btn-lg btn btn-primary">Add</button>
+
+      <button ng-disabled="my-form.$invalid" type="submit" class="btn btn-primary">Add</button>
     </div>
   </form>
