@@ -1,4 +1,4 @@
-<div class="col-md-4 col-md-offset-4" style="background-color: white; padding-bottom:25px;margin-top: 2%;">  
+<div class="container col-md-2 col-md-offset-2" style="background-color: white; max-width:850px; margin-top:2%;">  
   <div class="page-header">
 
 
@@ -9,126 +9,207 @@
     </div>
   </div>
     <ul class="nav nav-pills" role="tablist">
-        <li ng-class="{ active: isSet(1) }"><a href ng-click="setTab(1)">Customer Details</a></li>
-        <li ng-class="{ active: isSet(2) }"><a href ng-click="setTab(2)">Company Details</a></li>
-      <li ng-class="{ active: isSet(3) }"><a href ng-click="setTab(3)">Item Details</a></li>
+        <li ng-class="{ active: isSet(1) }"><a href ng-click="setTab(1)">Invoice Details</a></li>
+        <li ng-class="{ active: isSet(2) }"><a href ng-click="setTab(2)">Update Record</a></li>
     </ul>
     <div class="tab-content">
-      <div  ng-show="isSet(1)" style="margin-top:10px">
-       
+      
+      <div id="form_print" ng-show="isSet(1)" style="margin-top:10px" >
+        
           
+       
+<div class="row">
+      <div class="col-xs-12 heading">
+        INVOICE
+      </div>
+    </div>
+
+  <div ng-show="error" class="alert alert-danger row">
+    <span>{{ error.message }}</span>
+  </div>
+    <div class="row infos">
+      <div class="col-xs-6 row-xs-6">
+        <div class="invoice-number-container">
+          <label for="invoice-number">Invoice <br>{{record.invoice.invoice_number}}</label>
+        </div>
+       
+      </div>
+      <div class="col-xs-6 row-xs-5 logo-container ">
+        
+        <img ng-src="{{record.invoice.logo_url}}" alt="your image" width="75" height="75" class="pull-right"/>
+        <div>
+          <div class="noPrint" ng-hide="printMode">
+            
+      
+          </div>
+        </div>
+      </div>
+    </div><hr>
+    <div class="row infos">
+      <div class="col-xs-6">
+         <div class="input-container">{{record.invoice.customer_info.name}}</div>
+        <div class="input-container">{{record.invoice.customer_info.web_link}}</div>
+        <div class="input-container">{{record.invoice.customer_info.address1}}</div>
+        <div class="input-container">{{record.invoice.customer_info.address2}}</div>
+        <div class="input-container">{{record.invoice.customer_info.postal}}</div>
+        <div class="input-container" data-ng-hide="printMode">
+          <!--select ng-model="currencySymbol" ng-options="currency.symbol as currency.name for currency in availableCurrencies"></select-->
+        </div>
+      </div>
+      <div class="col-xs-6 right">
+         <div class="input-container">{{record.invoice.company_info.name_c}}</div>
+        <div class="input-container">{{record.invoice.company_info.web_link_c}}</div>
+        <div class="input-container">{{record.invoice.company_info.address1_c}}</div>
+        <div class="input-container">{{record.invoice.company_info.address2_c}}</div>
+        <div class="input-container">{{record.invoice.company_info.postal_c}}</div>
+      </div>
+    </div>
+    <div class="items-tables" style="background:#ffffff; margin-right:15px; margin-left:15px;">
+      
+      
+      <div class="row header">
+        <div class="col-xs-1">&nbsp;</div>
+        <div class="col-xs-5">Description</div>
+        <div class="col-xs-2">Quantity</div>
+        <div class="col-xs-2">Cost {{invoice.currencySymbol}}</div>
+        <div class="col-xs-2 text-right">Total</div>
+      </div>
+      <div class="row invoice-item" ng-animate="'slide-down'"  ng-repeat="item in record.invoice.items track by $index"> <!--repeat here -->
+        <div class="col-xs-1 remove-item-container">
+          <!--<a href ng-hide="printMode" ng-click="removeItem(item)" class="btn btn-danger">[X]</a>-->
+        </div>
+        <div class="col-xs-5 input-container">
+          {{item.description}}
+        </div>
+        <div class="col-xs-2 input-container">
+         {{item.qty}}
+        </div>
+        <div class="col-xs-2 input-container">
+          {{item.cost | currency: currencySymbol}}
+        </div>
+        <div class="col-xs-2 text-right input-container">
+         {{item.total | currency: currencySymbol}}
+        </div>
+      <!--/div-->
+      <div class="row invoice-item">
+        <!--div class="col-xs-12 add-item-container" ng-hide="printMode">
+          <a class="btn btn-primary" href ng-click="addItem()" >[+]</a-->
+        </div>
+      
+      <div ng-show="$last">
+      <div class="row" style="margin-right:15px; margin-left:15px;">
+        <div class="col-xs-10 text-right">Sub Total</div>
+        
+        <div class="col-xs-2 text-right">
+          
+          {{item.subtotal | currency: currencySymbol}}
+        
+       
+      </div>
+      <div class="row" style="margin-right:6px;">
+        <div class="col-xs-10 text-right">Tax(%): 
+          
+            <!--input ng-model="invoice.tax" ng-validate="number" style="width:43px" readonly></div></div-->
+        </div>
+        
+        <div class="col-xs-2 text-right" >
+          
+          {{item.tax | currency: currencySymbol}}
+        
+        </div>
+        
+      </div>
+      <div class="row" style="margin-right:6px; margin-left:15px;">
+        <div class="col-xs-10 text-right">Grand Total:</div>
+
+        <div class="col-xs-2 text-right">
+          
+          {{item.grandtotal | currency: currencySymbol}}
+        </div>
+        
+      
+    </div>
+    </div>
+   </div>
+        </div>
+      </div>
+         <button class="btn btn-primary" ng-print print-element-id="form_print"><i class="fa fa-print"></i> Print</button>
+      </div>
+     
+        <div ng-show="isSet(2)" style="margin-top:10px" >
+       
+           <div ng-show="isLoggedIn()">
         <div class="col-md-7">
        <div>          
          <h3>
-         Name:</h3> {{record.invoice.customer_info.name}}
+         Customer Name:</h3> 
+         <div click-to-edit type="inputText" ng-model="record.invoice.customer_info.name" ></div>
+         <!--<input type="text" id="invoice-number" ng-model="invoice_number" value="" placeholder="{{record.invoice.customer_info.name}}"/-->
         </div><br>
            <div> 
           <h3>
-             Weblink:</h3> {{record.invoice.customer_info.web_link}}
+            Customer Weblink:</h3>
+             <div click-to-edit type="inputText" ng-model="record.invoice.customer_info.web_link" ></div>
           </div><br>
            <div> 
              <h3>
-               Address 1:</h3>{{record.invoice.customer_info.address1}}
+              Customer Address 1:</h3>
+             <div click-to-edit type="inputText" ng-model="record.invoice.customer_info.address1" ></div>
           </div><br>
           <div>
           <h3>
-            Address 2:</h3>{{record.invoice.customer_info.address2}}
+           Customer Address 2:</h3>
+            <div click-to-edit type="inputText" ng-model="record.invoice.customer_info.address2" ></div>
             </div><br>
             <div>
           <h3>
-            Postal:</h3>{{record.invoice.customer_info.postal}}
-          </div>
-          </div>
-        <div class="col-md-5">
-          <img src="{{record.invoice.logo_url}}" style="width:200px;height:120px;">
-          <div ng-hide="isLoggedIn()">
-  <h3>You need to <a href="/#/login">Log In</a> as admin before you can edit the record.</h3>
-</div>
-        </div>
-      </div>
-      <div ng-show="isSet(2)" style="margin-top:10px">
-        
-     <div class="col-md-7">
-       <div>          
+           Customer Postal:</h3>
+              <div click-to-edit type="inputText" ng-model="record.invoice.customer_info.postal" ></div>
+          </div><br>
+          <div>          
          <h3>
-         Name:</h3> {{record.invoice.company_info.name_c}}
+       Company Name:</h3> 
+            <div click-to-edit type="inputText" ng-model="record.invoice.company_info.name_c" ></div>
         </div><br>
            <div> 
           <h3>
-             Weblink:</h3> {{record.invoice.company_info.web_link_c}}
+            Company Weblink:</h3>
+             <div click-to-edit type="inputText" ng-model="record.invoice.company_info.web_link_c" ></div>
           </div><br>
            <div> 
              <h3>
-               Address 1:</h3>{{record.invoice.company_info.address1_c}}
+              Company Address 1:</h3>
+             <div click-to-edit type="inputText" ng-model="record.invoice.company_info.address1_c" ></div>
           </div><br>
           <div>
           <h3>
-            Address 2:</h3>{{record.invoice.company_info.address2_c}}
+           Company Address 2:</h3>
+            <div click-to-edit type="inputText" ng-model="record.invoice.company_info.address2_c" ></div>
             </div><br>
             <div>
           <h3>
-            Postal:</h3>{{record.invoice.company_info.postal_c}}
+           Company Postal:</h3>
+              <div click-to-edit type="inputText" ng-model="record.invoice.company_info.postal_c" ></div>
+          </div><br>
+          <div>
+          <button ng-click="updateRecord(record)">Update</button>
           </div>
           </div>
-         <div class="col-md-5">
-          <img src="{{record.invoice.logo_url}}" style="width:200px;height:120px;">
-           <div ng-hide="isLoggedIn()">
-  <h3>You need to <a href="/#/login">Log In</a> as admin before you can edit the record.</h3>
-</div>
-        </div>
-      </div>
-      
-      <div ng-show="isSet(3)" style="margin-top:10px">
-        <!--fgtfghfg
-        {{record.invoice}}-->
-        <div ng-repeat="item in record.invoice.items">
-     <div class="col-md-7">
-       <div>          
-         <h3>
-         Quantity:</h3> {{item.qty}}
-        </div>
-           <div> 
-          <h3>
-             Description:</h3> {{item.description}}
           </div>
-           <div> 
-             <h3>
-               Cost:</h3>{{item.cost}}
+           <div class="col-md-5">
+             
+            <div ng-hide="isLoggedIn()">
+              <h3>You need to <a href="/#/login">Log In</a> as admin before you can edit the record.</h3>
+            </div>
           </div>
        
-           <div> 
-             <h3>
-               Tax(%):</h3>{{item.tax}}
-          </div>
-       <div> 
-             <h3>
-               Total:</h3>{{item.total}}
-          </div>
-        <div> 
-             <h3>
-               SubTotal:</h3>{{item.subtotal}}
-          </div>
-        <div> 
-             <h3>
-               Grand Total:</h3>{{item.grandtotal}}
-          </div><br>
-       </div>
-          <div class="col-md-5">
-          <img src="{{record.invoice.logo_url}}" style="width:200px;height:120px;">
-            <div ng-hide="isLoggedIn()">
-  <h3>You need to <a href="/#/login">Log In</a> as admin before you can edit the record.</h3>
-</div>
-        </div>
-      
-      
-      
-    <!--</div>-->
       </div>
-
-
-
-
-<style>
+         
+    
+      
+  </div>
+  <style>
 .innerHeader{position:relative;z-index:6;background-color:#ffcf05}
 </style>
 </div>
+
