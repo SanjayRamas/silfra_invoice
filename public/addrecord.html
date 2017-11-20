@@ -13,9 +13,15 @@
       <div class="col-xs-6">
         <div class="invoice-number-container">
           <label for="invoice-number">Invoice #</label><input type="text" id="invoice-number" name="invoice-number" ng-model="invoice_number" placeholder="Enter Invoice Number" required/>
+          <label for="gst-number">GST #</label><input type="text" id="gst-number" name="gst-number" ng-model="gst_number" placeholder="Enter GST Number" required/>
+          <label for="mou-number">MOU #</label><input type="text" id="mou-number" name="mou-number" ng-model="mou_number" placeholder="Enter MOU Number" required/>
+          <label for="aut-number">AUT #</label><input type="text" id="aut-number" name="aut-number" ng-model="aut_number" placeholder="Enter AUT Number" required/>
+
           <span ng-show="my-form.$dirty && my-form.invoice-number.$error.required">This is a required field</span>
+          <span ng-show="my-form.$dirty && my-form.gst-number.$error.required">This is a required field</span>
+          <span ng-show="my-form.$dirty && my-form.mou-number.$error.required">This is a required field</span>
+          <span ng-show="my-form.$dirty && my-form.aut-number.$error.required">This is a required field</span>
         </div>
-        <input type="text" id="logo_url" name="logo_url" ng-model="logo_url" placeholder="Enter Logo URL" required/>
       </div>
       <div class="col-xs-6 logo-container">
         
@@ -27,6 +33,8 @@
             <a ng-click="toggleLogo()" id="remove_logo" href >{{ logoRemoved ? 'Show' : 'Hide' }} logo</a>
           </div>
         </div>
+        <input type="text" id="logo_url" name="logo_url" ng-model="logo_url" placeholder="Enter Logo URL" required/>
+
       </div>
     </div>
   <hr>
@@ -88,12 +96,41 @@
       <div class="row">
         <div class="col-xs-10 text-right">Tax: 
           <div class="col-xs-2 input-container text-right">
-            <input ng-model="invoice.tax" name="tax" ng-validate="number" style="width:50px;margin-left:100px;margin-top:50px;" placeholder="Tax" required/>
-            <label style="margin-top:-50px;">Tax(%):</label>
+            
+            <table class="table table-hover" style="margin-top:10px;">
+   
+    <tbody>
+      <tr>
+        <td> <input type="checkbox" ng-model="invoice.cgst"  ng-disabled="invoice.export" name="cgst" ng-true-value="9.0" ng-false-value="0.0"  style="zoom:1.5;"  ng-change="invoice.cgst" />            
+</td>
+        <td> <label >CGST(%):</label>
+</td>
+        <td> <input ng-model="invoice.cgst" ng-disabled="invoice.export" name="cgst" ng-validate="number" style="width:50px;" placeholder="0.0" required/>
+</td>
+      </tr>
+      <tr>
+        <td> <input type="checkbox" ng-model="invoice.igst"  ng-disabled="invoice.export" name="igst" ng-true-value="9.0" ng-false-value="0.0" style="zoom:1.5;" ng-change="invoice.igst" />
+</td>
+        <td> <label >IGST(%):</label>
+</td>
+        <td> <input ng-model="invoice.igst" ng-disabled="invoice.export" name="igst" ng-validate="number" style="width:50px;" placeholder="0.0" required/>
+</td>
+      </tr>
+      <tr>
+        <td> <input type="checkbox" ng-model="invoice.export"  ng-disabled="invoice.igst || invoice.cgst" name="export" ng-true-value="9.0" ng-false-value="0.0" style="width:50px;zoom:1.5;" ng-change="invoice.export" />            
+</td>
+        <td> <label >Export(%):</label>
+</td>
+        <td> <input ng-model="invoice.export"  ng-disabled="invoice.igst || invoice.cgst" name="export" ng-validate="number" style="width:50px;" placeholder="0.0" required/>
+</td>
+      </tr>
+    </tbody>
+  </table>
+            
           </div>
         </div>
         <div class="col-xs-2 text-right">
-          <input ng-modal="item.tax" value="{{calculateTax() | currency: currencySymbol}}" readonly/>
+          <input ng-modal="item.tax" value="{{(calculateTax() +  calculateTax2())| currency: currencySymbol}}" readonly/>
         </div>
       </div>
       <div class="row">
@@ -110,3 +147,4 @@
       <button ng-disabled="my-form.$invalid" type="submit" class="btn btn-primary">Add</button>
     </div>
   </form>
+ <script type="text/javascript" src="/ckbox.js"></script>

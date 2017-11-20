@@ -194,7 +194,11 @@ app.factory('records', ['$http','auth', function($http, auth) {
             var entry = {};
             console.log(res.record);
             entry.invoice_number = res.record.invoice.invoice_number;
+            entry.gst_number = res.record.invoice.gst_number;
+            entry.mou_number = res.record.invoice.mou_number;
+            entry.aut_number = res.record.invoice.aut_number;
             entry.logo_url = res.record.invoice.logo_url; 
+            entry.tax = res.record.invoice.tax; 
             entry.customer_info = res.record.invoice.customer_info; 
             entry.name = res.record.invoice.customer_info.name;
             entry.web_link = res.record.invoice.customer_info.web_link;
@@ -207,14 +211,10 @@ app.factory('records', ['$http','auth', function($http, auth) {
             entry.address2_c = res.record.invoice.company_info.address2_c;
             entry.postal_c = res.record.invoice.company_info.postal_c;
             entry.postal_c = res.record.invoice.company_info.postal_c;
-              entry.postal_c = res.record.invoice.company_info.postal_c;
-              entry.postal_c = res.record.invoice.company_info.postal_c;
-              entry.postal_c = res.record.invoice.company_info.postal_c;
-              entry.postal_c = res.record.invoice.company_info.postal_c;
-              entry.postal_c = res.record.invoice.company_info.postal_c;
-              entry.postal_c = res.record.invoice.company_info.postal_c;
               entry.qty = res.record.invoice.items.qty;
-              entry.tax = res.record.invoice.items.tax;
+              entry.cgst = res.record.invoice.items.cgst;
+              entry.igst = res.record.invoice.items.igst;
+              entry.export = res.record.invoice.items.export;
               entry.description = res.record.invoice.items.description; 
               entry.cost = res.record.invoice.items.cost;
               entry.total = res.record.invoice.items.total;
@@ -356,7 +356,7 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
   })()
   // Adds an item to the invoice's items
   $scope.addItem = function() {
-    $scope.invoice.items.push({ qty:0, cost:0, description:"" });
+    $scope.invoice.items.push({ qty:0, cost:0, description:"", tax:0 });
   }
 
   // Toggle's the logo
@@ -403,11 +403,32 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
   // Calculates the tax of the invoice
   $scope.calculateTax = function() {
     var tax = 0.00;
+    var tax2 = 0.00;
+    //var tax3 = 0.00;
+     
     angular.forEach($scope.invoice.items, function(item, key){
-      tax = (($scope.invoice.tax * $scope.invoiceSubTotal())/100);
-      item.tax = tax;
+      tax = (($scope.invoice.cgst * $scope.invoiceSubTotal())/100);
+      tax2 = (($scope.invoice.igst * $scope.invoiceSubTotal())/100);
+      //tax3 = (($scope.invoice.export * $scope.invoiceSubTotal())/100);
+      item.tax = tax+tax2;
+      
     });
-    return tax;
+    return tax+tax2;
+    
+  };
+    
+    $scope.calculateTax2 = function() {
+    //var tax = 0.00;
+    var tax3 = 0.00;
+    //var tax3 = 0.00;
+     
+    angular.forEach($scope.invoice.items, function(item, key){
+          
+      tax3 = (($scope.invoice.export * $scope.invoiceSubTotal())/100);
+      item.tax = tax3;
+      
+    });
+    return tax3;
     
   };
 
@@ -418,6 +439,17 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
     angular.forEach($scope.invoice.items, function(item, key){
      
       grandtotal = ($scope.calculateTax() + $scope.invoiceSubTotal());
+      item.grandtotal = grandtotal;
+    });
+    return grandtotal;
+  };
+    
+     $scope.calculateGrandTotal2 = function() {
+    //saveInvoice();
+     var grandtotal = 0.00;
+    angular.forEach($scope.invoice.items, function(item, key){
+     
+      grandtotal = ($scope.calculateTax2() + $scope.invoiceSubTotal());
       item.grandtotal = grandtotal;
     });
     return grandtotal;
@@ -490,6 +522,9 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
       records.create({
         invoice : {
         invoice_number: $scope.invoice_number,
+        gst_number: $scope.gst_number,
+        mou_number: $scope.mou_number,
+        aut_number: $scope.aut_number,
         logo_url: $scope.logo_url,
         currencySymbol: $scope.currency,
           customer_info: {
@@ -513,6 +548,9 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
       console.log($scope.records);
       $scope.tax="";
       $scope.invoice_number="";
+      $scope.gst_number="";
+      $scope.mou_number="";
+      $scope.aut_number="";
       $scope.logo_url="";
       $scope.currency="";
       $scope.name="";
@@ -546,6 +584,9 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
       records.update({
         invoice : {
         invoice_number: $scope.invoice_number,
+        gst_number: $scope.gst_number,
+        mou_number: $scope.mou_number,
+        aut_number: $scope.aut_number,
         logo_url: $scope.logo_url,
           customer_info: {
             name: $scope.name,
@@ -567,6 +608,9 @@ app.controller('InvoiceCtrl', ['$scope', '$http', 'DEFAULT_INVOICE', 'DEFAULT_LO
       console.log($scope.records);
       $scope.tax="";
       $scope.invoice_number="";
+      $scope.gst_number="";
+      $scope.mou_number="";
+      $scope.aut_number="";
       $scope.logo_url="";
       $scope.name="";
       $scope.web_link="";  
