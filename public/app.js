@@ -774,6 +774,7 @@ app.controller('AuthCtrl', ['$scope', '$state', 'auth', function($scope, $state,
     auth.register($scope.user).error(function(error) {
       $scope.error = error;
     }).then(function() {
+      alert("Successfully Registered")
       $state.go('landing');
     });
   };
@@ -782,6 +783,7 @@ app.controller('AuthCtrl', ['$scope', '$state', 'auth', function($scope, $state,
     auth.login($scope.user).error(function(error){
       $scope.error = error;
     }).then(function(){
+      alert("Successfully Logged In")
       $state.go('landing');
     });
   };
