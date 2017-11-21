@@ -30,8 +30,6 @@
       placeholder="Password"
       ng-model="user.password" ng-required="true" ng-minlength="6" style="border-radius: 3px;" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Minimum 6 characters(having atleast 1 Uppercase letter and lowercase letter and number)">
   
-
-      <span class="help-block" ng-show="form.passwords.$invalid && !form.passwords.$pristine">
     </div>
     <button type="submit" ng-disabled="!form.$valid" class="btn-lg btn btn-primary">Register</button>
   </form>
