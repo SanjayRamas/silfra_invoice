@@ -5,26 +5,153 @@
       </div>
     </div>
 
-  <div ng-show="error" class="alert alert-danger row">
-    <span>{{ error.message }}</span>
-  </div>
+  
 
-  <form ng-submit="register()"
+  <form name="form" ng-submit="register()"
     style="margin-top:0px; background-color:#E6E6FA; max-width:650px">
 <!--     <h3>Register</h3> -->
-
+<div ng-show="error" class="alert alert-danger row">
+    <span class="help-block">{{ error.message }}</span>
+  </div>
+    
     <div class="form-group">
+
       <input type="text"
+             name="username"
       class="input-lg form-control"
       placeholder="Username"
-      ng-model="user.username" style="border-radius: 3px;">
+      ng-model="user.username"  ng-required="true" ng-minlength="5" ng-maxlength="25" style="border-radius: 3px;" title="Minimum 5 characters and Maximum 25 characters">
     </div>
     <div class="form-group">
+     
       <input type="password"
+             name="passwords"
       class="input-lg form-control"
       placeholder="Password"
-      ng-model="user.password" style="border-radius: 3px;">
+      ng-model="user.password" ng-required="true" ng-minlength="6" style="border-radius: 3px;" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Minimum 6 characters(having atleast 1 Uppercase letter and lowercase letter and number)">
+  
     </div>
-    <button type="submit" class="btn-lg btn btn-primary">Register</button>
+    
+     <div class="form-group">
+
+      <input type="text"
+             name="company_name"
+      class="input-lg form-control"
+      placeholder="Company Name"
+      ng-model="user.company_name"  >
+    </div>
+     <div class="form-group">
+
+      <input type="text"
+             name="address1"
+      class="input-lg form-control"
+      placeholder="Address1"
+      ng-model="user.address1"  >
+    </div>
+     <div class="form-group">
+
+      <input type="text"
+             name="address2"
+      class="input-lg form-control"
+      placeholder="Address2"
+      ng-model="user.address2"  >
+    </div>
+     <div class="form-group">
+
+      <input type="text"
+             name="city"
+      class="input-lg form-control"
+      placeholder="City"
+      ng-model="user.city"  >
+    </div>
+     <div class="form-group">
+
+      <input type="text"
+             name="state"
+      class="input-lg form-control"
+      placeholder="State"
+      ng-model="user.state"  >
+    </div>
+     <div class="form-group">
+
+      <input type="text"
+             name="zip"
+      class="input-lg form-control"
+      placeholder="Zip"
+      ng-model="user.zip"  >
+    </div>
+     <div class="form-group">
+
+      <input type="text"
+             name="contact_name"
+      class="input-lg form-control"
+      placeholder="Contact Person Name"
+      ng-model="user.contact_name"  >
+    </div>
+     <div class="form-group">
+
+      <input type="text"
+             name="contact_phone"
+      class="input-lg form-control"
+      placeholder="Contact Phone Number"
+      ng-model="user.contact_phone"  >
+    </div>
+     <div class="form-group">
+
+      <input type="text"
+             name="gst_number"
+      class="input-lg form-control"
+      placeholder="GST Number"
+      ng-model="gst_number"  >
+    </div>
+     <div class="form-group">
+
+      <input type="text"
+             name="pan"
+      class="input-lg form-control"
+      placeholder="PAN"
+      ng-model="user.pan"  >
+    </div>
+     <div class="form-group">
+
+      <input type="text"
+             name="aut"
+      class="input-lg form-control"
+      placeholder="AUT Number"
+      ng-model="user.aut"  >
+    </div>
+     <div class="form-group">
+
+      <input type="text"
+             name="bank_name"
+      class="input-lg form-control"
+      placeholder="Bank Name"
+      ng-model="user.bank_name"  >
+    </div>
+     <div class="form-group">
+
+      <input type="text"
+             name="ifsc"
+      class="input-lg form-control"
+      placeholder="IFSC code"
+      ng-model="user.ifsc"  >
+    </div>
+     <div class="form-group">
+
+      <input type="text"
+             name="account"
+      class="input-lg form-control"
+      placeholder="Account Number"
+      ng-model="user.account"  >
+    </div>
+     <div class="form-group">
+
+      <input type="text"
+             name="swiftcode"
+      class="input-lg form-control"
+      placeholder="Swift Code"
+      ng-model="user.swiftcode"  ng-required="true" >
+    </div>
+    <button type="submit" ng-disabled="!form.$valid" class="btn-lg btn btn-primary">Register</button>
   </form>
 </div>

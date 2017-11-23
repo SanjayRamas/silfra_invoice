@@ -119,9 +119,26 @@ router.post('/register', function(req, res, next) {
   var user = new User();
   user.username = req.body.username;
   user.setPassword(req.body.password);
+  user.company_name = req.body.username;
+  user.address1 = req.body.address1;
+  user.address2 = req.body.address2 ;
+  user.city = req.body.city ;
+  user.state = req.body.state;
+  user.zip = req.body.zip ;
+  user.contact_name = req.body.contact_name ;
+  user.contact_phone = req.body.contact_phone ;
+  user.gst = req.body.gst;
+  user.pan = req.body.pan;
+  user.aut = req.body.aut;
+  user.bank_name = req.body.bank_name ;
+  user.ifsc = req.body.ifsc;
+  user.account = req.body.account ;
+  user.swiftcode = req.body.swiftcode ;
+  
   user.save( function (err) {
     if (err) {console.log("prob"); return next(err) ; }
     return res.json({token: user.generateJWT()});
+     
   });
 });
 

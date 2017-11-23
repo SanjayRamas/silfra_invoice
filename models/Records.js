@@ -3,6 +3,9 @@ var mongoose = require('mongoose');
 var RecordSchema = new mongoose.Schema({
   invoice : {
         invoice_number: String,
+        gst_number: String,
+        mou_number: String,
+        aut_number: String,
         logo_url: String,
         currencySymbol: String,
           customer_info: {
@@ -23,6 +26,9 @@ var RecordSchema = new mongoose.Schema({
             {
               qty: String, 
               tax: String,
+              cgst: String,
+              igst: String,
+              export: String,
               description: String, 
               cost: String,
               total: String,
